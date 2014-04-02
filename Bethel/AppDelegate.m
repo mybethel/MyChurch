@@ -12,6 +12,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIColor* navBarColor = [UIColor colorWithRed:0.047 green:0.568 blue:0.709 alpha:1.0];
+
+    [[UINavigationBar appearance] setTintColor:navBarColor];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    [[UINavigationBar appearance] setAlpha:0.7];
+    [[UIToolbar appearance] setTintColor:navBarColor];
+    
+    self.window.tintColor = navBarColor;
+    
     // Override point for customization after application launch.
     return YES;
 }

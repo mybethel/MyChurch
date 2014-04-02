@@ -6,8 +6,17 @@
 //  Copyright (c) 2013 Albert Martin. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
 #import "FlipsideViewController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+    CLLocationCoordinate2D currentCenter;
+    int currentDist;
+    BOOL firstLaunch;
+}
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
