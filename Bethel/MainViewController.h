@@ -9,7 +9,7 @@
 #import <MapKit/MapKit.h>
 #import "FlipsideViewController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
+@interface MainViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 {
     CLLocationManager *locationManager;
     CLLocationCoordinate2D currentCenter;
@@ -20,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *locationsTableView;
 @property (nonatomic, retain) NSArray *locationResults;
+
+- (UIColor *)interfaceColor;
 
 @end

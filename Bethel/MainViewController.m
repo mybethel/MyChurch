@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Albert Martin. All rights reserved.
 //
 
-#import "AFNetworking/AFNetworking.h"
+#import "AFNetworking/AFNetworking.h"f
 #import "MainViewController.h"
+#import "ChurchMainViewController.h"
 #import "ChurchLocation.h"
 
 #define METERS_PER_MILE 1609.344;
@@ -22,18 +23,24 @@
 {
     [super viewDidLoad];
     
-    UIColor* navBarColor = [UIColor colorWithRed:0.082 green:0.568 blue:0.709 alpha:1.0];
+    // Replacing the title with a custom view to allow the "Back" button to be a simple chevron.
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    titleLabel.text = @"Bethel";
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    
+    [titleLabel sizeToFit];
+    
+    self.navigationItem.titleView = titleLabel;
     
     // Set the color of all newly created navbars.
-    [[UINavigationBar appearance] setBarTintColor:navBarColor];
+    [[UINavigationBar appearance] setBarTintColor:self.interfaceColor];
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UINavigationBar appearance] setAlpha:0.7];
     
-    // Update the toolbar appearance.
-    [[UIToolbar appearance] setTintColor:navBarColor];
-    
     // Set the color of the current navbar, displaying immediate change.
-    self.navigationController.navigationBar.barTintColor = navBarColor;
+    self.navigationController.navigationBar.barTintColor = self.interfaceColor;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.translucent = YES;
@@ -48,10 +55,22 @@
     firstLaunch = TRUE;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBar.barTintColor = self.interfaceColor;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Basic UI
+
+- (UIColor *)interfaceColor
+{
+    return [UIColor colorWithRed:0.082 green:0.568 blue:0.709 alpha:1.0];
 }
 
 #pragma mark - Map View
@@ -106,8 +125,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //NSLog(@"%@", _locationResults);
-    // Return the number of items in tabledata
+    // Return the number of locations in view.
     return [_locationResults count];
 }
 
@@ -127,17 +145,18 @@
     return cell;
 }
 
-#pragma mark - Flipside View
-
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self performSegueWithIdentifier:@"ChurchDetail" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showAlternate"]) {
-        [[segue destinationViewController] setDelegate:self];
+    if ([[segue identifier] isEqualToString:@"ChurchDetail"]) {
+        ChurchMainViewController *controller = [segue destinationViewController];
+        controller.location = [_locationResults objectAtIndex:[_locationsTableView indexPathForSelectedRow].row][@"obj"];
+        controller.ministryId = controller.location[@"ministry"];
+        [_locationsTableView deselectRowAtIndexPath:[_locationsTableView indexPathForSelectedRow] animated:YES];
     }
 }
 

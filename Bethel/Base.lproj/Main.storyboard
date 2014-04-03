@@ -49,11 +49,31 @@
                     <connections>
                         <outlet property="locationsTableView" destination="jtE-41-tKb" id="XtO-gi-G6N"/>
                         <outlet property="mapView" destination="PDP-sT-pTz" id="hmJ-gk-srT"/>
+                        <segue destination="83v-wG-0iO" kind="push" identifier="ChurchDetail" id="aaH-Mp-Fma"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4L-l5-tyG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-51" y="199"/>
+            <point key="canvasLocation" x="31" y="-145"/>
+        </scene>
+        <!--Church Main View Controller - Church Name-->
+        <scene sceneID="jlB-Lx-kbu">
+            <objects>
+                <viewController id="83v-wG-0iO" customClass="ChurchMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ucX-LP-tgA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xlj-IT-Tee"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r3b-Ny-uUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Church Name" id="Hul-CB-wji"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zz-ml-aF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="-145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qsc-Pb-yBl">
@@ -74,43 +94,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZP-tO-gBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-464" y="-145"/>
-        </scene>
-        <!--Flipside View Controller-->
-        <scene sceneID="z9J-Vg-hzE">
-            <objects>
-                <viewController id="kIf-nA-PKG" customClass="FlipsideViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AVv-0q-btH"/>
-                        <viewControllerLayoutGuide type="bottom" id="EbA-zT-vTC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tg4-aq-CMy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="hED-2o-FLw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="caU-JJ-JLf">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="WuG-Ps-ZbD">
-                                            <connections>
-                                                <action selector="done:" destination="kIf-nA-PKG" id="j28-pm-V55"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hED-2o-FLw" firstAttribute="leading" secondItem="tg4-aq-CMy" secondAttribute="leading" id="4QI-iY-IyT"/>
-                            <constraint firstItem="hED-2o-FLw" firstAttribute="top" secondItem="tg4-aq-CMy" secondAttribute="top" id="4lF-kP-6dV"/>
-                            <constraint firstItem="hED-2o-FLw" firstAttribute="trailing" secondItem="tg4-aq-CMy" secondAttribute="trailing" id="cVE-3m-sGp"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xlJ-1o-FvB" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="368" y="182"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="0.57647061347961426" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
