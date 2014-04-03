@@ -59,7 +59,7 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     if ([mapView showsUserLocation] && firstLaunch) {
         MKCoordinateRegion region;
-        region = MKCoordinateRegionMakeWithDistance(locationManager.location.coordinate, 2000, 2000);
+        region = MKCoordinateRegionMakeWithDistance(locationManager.location.coordinate, 4000, 4000);
         [mapView setRegion:region animated:YES];
         firstLaunch = FALSE;
     }
@@ -86,7 +86,11 @@
             }
         }
         NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
-        for (id location in locations) {
+        
+        [self setLocationResults:[locations objectForKey: @"locations"]];
+        [_locationsTableView reloadData];
+        
+        for (id location in _locationResults) {
             CLLocationCoordinate2D coordinate;
             coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
             coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
@@ -96,8 +100,31 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+}
+
+#pragma mark - Table View
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //NSLog(@"%@", _locationResults);
+    // Return the number of items in tabledata
+    return [_locationResults count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"MinistryLocationCell";
     
-    NSLog(@"Centerpoint changed to lat: %f lon: %f with radius of %d kilometers", currentCenter.latitude, currentCenter.longitude, currentDist/1000);
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    NSDictionary *item = [_locationResults objectAtIndex:[indexPath row]];
+    [[cell textLabel] setText:item[@"obj"][@"name"]];
+    [[cell detailTextLabel] setText:item[@"obj"][@"address"]];
+    
+    return cell;
 }
 
 #pragma mark - Flipside View
