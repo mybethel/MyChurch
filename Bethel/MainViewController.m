@@ -74,10 +74,12 @@
     currentDist = MKMetersBetweenMapPoints(eastMapPoint, westMapPoint);
     currentCenter = self.mapView.centerCoordinate;
     
+    NSString *locationQuery = [NSString stringWithFormat:@"http://my.bethel.io/location/map/%f/%f/%d", currentCenter.latitude, currentCenter.longitude, currentDist/1000];
+    
     // todo: Update the API to filter only by points within location.
     // Oh and don't forget about pin clustering if we're all the way zoomed out!
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://my.bethel.io/location/all" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:locationQuery parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         for (id<MKAnnotation> annotation in _mapView.annotations) {
             if ([annotation isKindOfClass:[ChurchLocation class]]) {
                 [_mapView removeAnnotation:annotation];
@@ -86,16 +88,16 @@
         NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
         for (id location in locations) {
             CLLocationCoordinate2D coordinate;
-            coordinate.latitude = [location[@"loc"][1] doubleValue];
-            coordinate.longitude = [location[@"loc"][0] doubleValue];
-            ChurchLocation *annotation = [[ChurchLocation alloc] initWithName:location[@"name"] address:location[@"address"] coordinate:coordinate];
+            coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
+            coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
+            ChurchLocation *annotation = [[ChurchLocation alloc] initWithName:location[@"obj"][@"name"] address:location[@"obj"][@"address"] coordinate:coordinate];
             [_mapView addAnnotation:annotation];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
     
-    NSLog(@"Centerpoint changed to lat: %f lon: %f with radius of %d meters", currentCenter.latitude, currentCenter.longitude, currentDist);
+    NSLog(@"Centerpoint changed to lat: %f lon: %f with radius of %d kilometers", currentCenter.latitude, currentCenter.longitude, currentDist/1000);
 }
 
 #pragma mark - Flipside View
