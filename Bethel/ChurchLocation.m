@@ -11,10 +11,6 @@
 
 @interface ChurchLocation ()
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *ministryName;
-@property (nonatomic, copy) NSString *address;
-@property (nonatomic, copy) NSDictionary *ministry;
 @property (nonatomic, assign) CLLocationCoordinate2D theCoordinate;
 
 @end

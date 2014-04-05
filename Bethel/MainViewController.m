@@ -188,8 +188,7 @@
     ChurchLocation *location = _locations[indexPath.row];
     cell.ministryName.text = location.title;
     cell.locationName.text = location.subtitle;
-    
-    [cell.logoView setImageWithURL:[NSURL URLWithString:@"http://cdn.bethel.io/400x400/podcast/53225a780c47fa1100b5ca3a.jpg"]
+    [cell.logoView setImageWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"http://cdn.bethel.io/150x150/%@", location.ministry[@"image"]]]
                    placeholderImage:[UIImage imageNamed:@"Placeholder"]
                    options:SDWebImageRefreshCached];
 
