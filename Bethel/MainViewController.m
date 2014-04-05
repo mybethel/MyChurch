@@ -152,6 +152,27 @@
     }];
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
+    if (!pinView) {
+        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
+        pinView.pinColor = MKPinAnnotationColorRed;
+        pinView.animatesDrop = YES;
+        pinView.canShowCallout = YES;
+        
+        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        pinView.rightCalloutAccessoryView = rightButton;
+    } else {
+        pinView.annotation = annotation;
+    }
+    return pinView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    [self performSegueWithIdentifier:@"ChurchDetail" sender:(ChurchLocation *)view.annotation];
+}
+
 #pragma mark - Table View
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -183,8 +204,13 @@
 {
     if ([[segue identifier] isEqualToString:@"ChurchDetail"]) {
         ChurchMainViewController *controller = [segue destinationViewController];
-        controller.location = [_locations objectAtIndex: [_locationsTableView indexPathForSelectedRow].row];
-        [_locationsTableView deselectRowAtIndexPath:[_locationsTableView indexPathForSelectedRow] animated:YES];
+        if ([sender isKindOfClass:[ChurchLocation class]]) {
+            controller.location = sender;
+            [_mapView deselectAnnotation:sender animated:YES];
+        } else {
+            controller.location = [_locations objectAtIndex: [_locationsTableView indexPathForSelectedRow].row];
+            [_locationsTableView deselectRowAtIndexPath:[_locationsTableView indexPathForSelectedRow] animated:YES];
+        }
     }
 }
 
