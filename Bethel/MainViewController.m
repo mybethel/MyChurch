@@ -190,7 +190,8 @@
     cell.locationName.text = location.subtitle;
     
     [cell.logoView setImageWithURL:[NSURL URLWithString:@"http://cdn.bethel.io/400x400/podcast/53225a780c47fa1100b5ca3a.jpg"]
-                   placeholderImage:[UIImage imageNamed:@"Placeholder"]];
+                   placeholderImage:[UIImage imageNamed:@"Placeholder"]
+                   options:SDWebImageRefreshCached];
 
     return cell;
 }
