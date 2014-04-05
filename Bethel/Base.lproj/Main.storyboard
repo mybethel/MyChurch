@@ -43,6 +43,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bethel" id="3eo-eh-dNh">
                         <barButtonItem key="leftBarButtonItem" title="Me" id="6Pr-AT-nmF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="wSk-dG-29U">
+                            <connections>
+                                <action selector="showDebugDistance:" destination="rQl-PL-IFJ" id="veL-nH-c6c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <size key="freeformSize" width="320" height="568"/>

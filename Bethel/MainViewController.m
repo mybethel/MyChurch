@@ -66,6 +66,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showDebugDistance:(id)sender
+{
+    if ([_locationResults count]) {
+        CLLocation *pinLocation = [[CLLocation alloc] initWithLatitude: [[_locationResults objectAtIndex: 0][@"obj"][@"loc"][1] floatValue] longitude: [[_locationResults objectAtIndex: 0][@"obj"][@"loc"][0] floatValue]];
+        CLLocation *userLocation = [[CLLocation alloc] initWithLatitude: _mapView.userLocation.coordinate.latitude longitude: _mapView.userLocation.coordinate.longitude];
+        CLLocationDistance distance = [pinLocation distanceFromLocation:userLocation];
+    
+        // If the user is within 0.2 kilometers of a church campus, they should be considered at the campus.
+        NSString *closest = [NSString stringWithFormat:@"Closest location is %4.0f meters away.", distance];
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Debug"
+                                                      message:closest
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    
+        [message show];
+    }
+}
+
 #pragma mark - Basic UI
 
 - (UIColor *)interfaceColor

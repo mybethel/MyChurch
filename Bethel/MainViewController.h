@@ -24,4 +24,6 @@
 
 - (UIColor *)interfaceColor;
 
+- (IBAction)showDebugDistance:(id)sender;
+
 @end
