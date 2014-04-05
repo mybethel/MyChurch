@@ -33,24 +33,29 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZY-wk-o9Q">
-                                                    <rect key="frame" x="87" y="25" width="213" height="21"/>
+                                                    <rect key="frame" x="95" y="25" width="213" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kt-Hl-GQh">
-                                                    <rect key="frame" x="87" y="47" width="213" height="21"/>
+                                                    <rect key="frame" x="95" y="47" width="213" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjH-FG-wDQ">
+                                                    <rect key="frame" x="12" y="9" width="75" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.97647064924240112" green="0.97647064924240112" blue="0.97647064924240112" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <outlet property="locationName" destination="3kt-Hl-GQh" id="99h-EF-Lue"/>
+                                            <outlet property="logoView" destination="gjH-FG-wDQ" id="z2K-aD-2Pg"/>
                                             <outlet property="ministryName" destination="1ZY-wk-o9Q" id="RW4-O2-ZKK"/>
                                         </connections>
                                     </tableViewCell>

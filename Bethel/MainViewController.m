@@ -7,6 +7,7 @@
 //
 
 #import "AFNetworking/AFNetworking.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "MainViewController.h"
 #import "ChurchMainViewController.h"
 #import "ChurchLocation.h"
@@ -166,6 +167,9 @@
     ChurchLocation *location = _locations[indexPath.row];
     cell.ministryName.text = location.title;
     cell.locationName.text = location.subtitle;
+    
+    [cell.logoView setImageWithURL:[NSURL URLWithString:@"http://cdn.bethel.io/400x400/podcast/53225a780c47fa1100b5ca3a.jpg"]
+                   placeholderImage:[UIImage imageNamed:@"Placeholder"]];
 
     return cell;
 }
