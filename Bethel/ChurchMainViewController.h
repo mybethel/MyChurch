@@ -12,7 +12,7 @@
 @interface ChurchMainViewController : UIViewController
 
 @property (nonatomic, retain) NSString *ministryId;
-@property (nonatomic, retain) NSDictionary *ministry;
+@property (nonatomic, retain) UIColor *interfaceColor;
 @property (nonatomic, retain) ChurchLocation *location;
 
 @end
