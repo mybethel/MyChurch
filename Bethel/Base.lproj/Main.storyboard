@@ -143,7 +143,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TemporaryTableCell.png" width="638" height="193"/>
+        <image name="TemporaryTableCell.png" width="319" height="96"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.57647061347961426" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
