@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *locationsTableView;
 @property (nonatomic, retain) NSArray *locationResults;
+@property (nonatomic, retain) NSDictionary *ministryResults;
 
 - (UIColor *)interfaceColor;
 

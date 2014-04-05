@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Albert Martin. All rights reserved.
 //
 
-#import "AFNetworking/AFNetworking.h"f
+#import "AFNetworking/AFNetworking.h"
 #import "MainViewController.h"
 #import "ChurchMainViewController.h"
 #import "ChurchLocation.h"
@@ -107,6 +107,7 @@
         NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
         
         [self setLocationResults:[locations objectForKey: @"locations"]];
+        [self setMinistryResults:[locations objectForKey: @"ministries"]];
         [_locationsTableView reloadData];
         
         for (id location in _locationResults) {
@@ -139,7 +140,8 @@
     }
     
     NSDictionary *item = [_locationResults objectAtIndex:[indexPath row]];
-    [[cell textLabel] setText:item[@"obj"][@"name"]];
+
+    [[cell textLabel] setText:_ministryResults[item[@"obj"][@"ministry"]][@"name"]];
     [[cell detailTextLabel] setText:item[@"obj"][@"address"]];
     
     return cell;
