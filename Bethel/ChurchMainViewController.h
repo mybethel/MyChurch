@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChurchLocation.h"
 
 @interface ChurchMainViewController : UIViewController
 
 @property (nonatomic, retain) NSString *ministryId;
 @property (nonatomic, retain) NSDictionary *ministry;
-@property (nonatomic, retain) NSDictionary *location;
+@property (nonatomic, retain) ChurchLocation *location;
 
 @end

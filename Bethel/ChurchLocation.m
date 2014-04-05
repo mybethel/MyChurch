@@ -10,32 +10,36 @@
 #import <AddressBook/AddressBook.h>
 
 @interface ChurchLocation ()
+
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *ministryName;
 @property (nonatomic, copy) NSString *address;
+@property (nonatomic, copy) NSDictionary *ministry;
 @property (nonatomic, assign) CLLocationCoordinate2D theCoordinate;
+
 @end
 
 @implementation ChurchLocation
 
-- (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate {
+- (id)initWithName:(NSString*)name ministry:(NSDictionary *)ministry coordinate:(CLLocationCoordinate2D)coordinate {
     if ((self = [super init])) {
         if ([name isKindOfClass:[NSString class]]) {
             self.name = name;
         } else {
             self.name = @"Unknown";
         }
-        self.address = address;
+        self.ministry = ministry;
         self.theCoordinate = coordinate;
     }
     return self;
 }
 
 - (NSString *)title {
-    return _name;
+    return _ministry[@"name"];
 }
 
 - (NSString *)subtitle {
-    return _address;
+    return _name;
 }
 
 - (CLLocationCoordinate2D)coordinate {

@@ -10,10 +10,13 @@
 #import "MainViewController.h"
 #import "ChurchMainViewController.h"
 #import "ChurchLocation.h"
+#import "LocationTableCell.h"
 
 #define METERS_PER_MILE 1609.344;
 
 @interface MainViewController ()
+
+@property (nonatomic, retain) NSMutableArray *locations;
 
 @end
 
@@ -53,6 +56,7 @@
     [locationManager setDesiredAccuracy: kCLLocationAccuracyBest];
     
     firstLaunch = TRUE;
+    _locations = [[NSMutableArray alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -114,8 +118,7 @@
     
     NSString *locationQuery = [NSString stringWithFormat:@"http://my.bethel.io/location/map/%f/%f/%d", currentCenter.latitude, currentCenter.longitude, currentDist/1000];
     
-    // todo: Update the API to filter only by points within location.
-    // Oh and don't forget about pin clustering if we're all the way zoomed out!
+    // todo: Pin clustering if we're all the way zoomed out!
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:locationQuery parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         for (id<MKAnnotation> annotation in _mapView.annotations) {
@@ -125,17 +128,24 @@
         }
         NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
         
-        [self setLocationResults:[locations objectForKey: @"locations"]];
-        [self setMinistryResults:[locations objectForKey: @"ministries"]];
-        [_locationsTableView reloadData];
+        _locationResults = [locations objectForKey: @"locations"];
+        _ministryResults = [locations objectForKey: @"ministries"];
+        
+        ChurchLocation *locationResult;
+        [_locations removeAllObjects];
         
         for (id location in _locationResults) {
             CLLocationCoordinate2D coordinate;
             coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
             coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
-            ChurchLocation *annotation = [[ChurchLocation alloc] initWithName:location[@"obj"][@"name"] address:location[@"obj"][@"address"] coordinate:coordinate];
-            [_mapView addAnnotation:annotation];
+            
+            locationResult = [[ChurchLocation alloc] initWithName:location[@"obj"][@"name"] ministry:_ministryResults[location[@"obj"][@"ministry"]] coordinate:coordinate];
+            
+            [_mapView addAnnotation:locationResult];
+            [_locations addObject:locationResult];
         }
+        
+        [_locationsTableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
@@ -146,23 +156,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of locations in view.
-    return [_locationResults count];
+    return [_locations count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MinistryLocationCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
-    NSDictionary *item = [_locationResults objectAtIndex:[indexPath row]];
+    LocationTableCell *cell = (LocationTableCell *)[tableView dequeueReusableCellWithIdentifier:@"MinistryLocationCell"];
 
-    [[cell textLabel] setText:_ministryResults[item[@"obj"][@"ministry"]][@"name"]];
-    [[cell detailTextLabel] setText:item[@"obj"][@"address"]];
-    
+    ChurchLocation *location = _locations[indexPath.row];
+    cell.ministryName.text = location.title;
+    cell.locationName.text = location.subtitle;
+
     return cell;
 }
 
@@ -175,8 +179,7 @@
 {
     if ([[segue identifier] isEqualToString:@"ChurchDetail"]) {
         ChurchMainViewController *controller = [segue destinationViewController];
-        controller.location = [_locationResults objectAtIndex:[_locationsTableView indexPathForSelectedRow].row][@"obj"];
-        controller.ministryId = controller.location[@"ministry"];
+        controller.location = [_locations objectAtIndex: [_locationsTableView indexPathForSelectedRow].row];
         [_locationsTableView deselectRowAtIndexPath:[_locationsTableView indexPathForSelectedRow] animated:YES];
     }
 }

@@ -15,7 +15,7 @@
     [super viewDidLoad];
 
     self.navigationController.navigationBar.topItem.title = @"";
-    self.navigationItem.title = _location[@"name"];
+    self.navigationItem.title = _location.title;
     
     // Change the navbar color based on the church settings.
     UIColor* navBarColor = [UIColor colorWithRed:0.580 green:0.760 blue:0.282 alpha:1.0];

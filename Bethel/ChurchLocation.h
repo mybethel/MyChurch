@@ -11,7 +11,7 @@
 
 @interface ChurchLocation : NSObject <MKAnnotation>
 
-- (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate;
+- (id)initWithName:(NSString*)name ministry:(NSDictionary*)ministry coordinate:(CLLocationCoordinate2D)coordinate;
 - (MKMapItem*)mapItem;
 
 @end
