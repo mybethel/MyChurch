@@ -56,6 +56,10 @@
     [locationManager setDistanceFilter: kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy: kCLLocationAccuracyBest];
     
+    // Set up the table view defaults
+    _locationsTableView.backgroundView = nil;
+    _locationsTableView.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1.0];
+    
     firstLaunch = TRUE;
     _locations = [[NSMutableArray alloc] init];
 }
