@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SVSegmentedControl.h"
 #import "ChurchLocation.h"
 
 @interface ChurchMainViewController : UIViewController
@@ -14,5 +15,7 @@
 @property (nonatomic, retain) NSString *ministryId;
 @property (nonatomic, retain) UIColor *interfaceColor;
 @property (nonatomic, retain) ChurchLocation *location;
+
+- (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl;
 
 @end

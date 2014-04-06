@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SVSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7A7A18DCF6EF490DA94F772D</key>
+		<key>454ED4BDD1994ADE9E120E58</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98E2ADB733CA46A8809EBA42</key>
+		<key>D33DBDBD6A5F4DDAB0285BDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B788193E778348838C0FB459</key>
+		<key>E348167DADB64EBB8A50B5B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F599D724464D4820ABD186A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E348167DADB64EBB8A50B5B0"
-               BuildableName = "libPods.a"
-               BlueprintName = "Pods"
+               BlueprintIdentifier = "D33DBDBD6A5F4DDAB0285BDF"
+               BuildableName = "libPods-SVSegmentedControl.a"
+               BlueprintName = "Pods-SVSegmentedControl"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

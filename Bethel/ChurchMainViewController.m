@@ -28,8 +28,31 @@
     
     _interfaceColor = [UIColor colorWithRed:red.intValue/255.0 green:green.intValue/255.0 blue:blue.intValue/255.0 alpha:1.0];
     
+    SVSegmentedControl *navigation = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Media", @"About", @"Connect", nil]];
+    [navigation addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+    navigation.thumb.tintColor = _interfaceColor;
+    navigation.height = 46;
+    navigation.textShadowColor = [UIColor clearColor];
+    navigation.font = [UIFont boldSystemFontOfSize:17];
+    navigation.backgroundTintColor = nil;
+    navigation.innerShadowColor = [UIColor clearColor];
+    navigation.thumb.gradientIntensity = 0.05;
+    navigation.thumb.shouldCastShadow = FALSE;
+    navigation.thumb.textShadowColor = [UIColor clearColor];
+    navigation.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+    navigation.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 15);
+    
+	[self.view addSubview:navigation];
+    [navigation setSelectedSegmentIndex:1 animated:NO];
+	
+	navigation.center = CGPointMake(160, 200);
+    
     // Change the navbar color based on the church settings.
     self.navigationController.navigationBar.barTintColor = self.interfaceColor;
+}
+
+- (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl {
+	NSLog(@"segmentedControl %i did select index %i (via UIControl method)", segmentedControl.tag, segmentedControl.selectedSegmentIndex);
 }
 
 @end
