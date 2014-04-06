@@ -20,19 +20,19 @@
     navigation.thumb.tintColor = [(AppDelegate *)[[UIApplication sharedApplication] delegate] interfaceColor];
     navigation.height = 46;
     navigation.textShadowColor = [UIColor clearColor];
-    navigation.font = [UIFont boldSystemFontOfSize:17];
+    navigation.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
     navigation.backgroundTintColor = [UIColor clearColor];
     navigation.innerShadowColor = [UIColor clearColor];
     navigation.thumb.gradientIntensity = 0.05;
     navigation.thumb.shouldCastShadow = FALSE;
     navigation.thumb.textShadowColor = [UIColor clearColor];
     navigation.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
-    navigation.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 15);
+    navigation.titleEdgeInsets = UIEdgeInsetsMake(0, 18, 0, 18);
     
 	[_navigationToolbar addSubview:navigation];
     [navigation setSelectedSegmentIndex:1 animated:NO];
 	
-	navigation.center = CGPointMake(160, 23);
+	navigation.center = CGPointMake(160, 25);
 }
 
 - (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl {
@@ -41,7 +41,7 @@
 
 - (UIScrollView *)scrollViewForParallexController
 {
-    return _contentScroller;
+    return self.scrollView;
 }
 
 @end

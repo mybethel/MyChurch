@@ -11,10 +11,10 @@
 #import "SVSegmentedControl.h"
 #import "ChurchLocation.h"
 
-@interface ChurchMainViewController : UIViewController <QMBParallaxScrollViewHolder>
+@interface ChurchMainViewController : UIViewController <QMBParallaxScrollViewHolder, UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIScrollView *contentScroller;
-@property (weak, nonatomic) IBOutlet UIView *navigationToolbar;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIView *navigationToolbar;
 
 - (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl;
 

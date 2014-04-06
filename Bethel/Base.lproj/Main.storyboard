@@ -121,65 +121,6 @@
             </objects>
             <point key="canvasLocation" x="463" y="-145"/>
         </scene>
-        <!--Church Main View Controller - Church Name-->
-        <scene sceneID="jlB-Lx-kbu">
-            <objects>
-                <viewController storyboardIdentifier="ChurchMainView" id="83v-wG-0iO" customClass="ChurchMainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ucX-LP-tgA"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xlj-IT-Tee"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="r3b-Ny-uUJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzW-zb-PZh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMS-WA-kIt">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1JH-2C-FOo">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rcG-Y2-Fqh">
-                                                <rect key="frame" x="104" y="489" width="94" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            </stepper>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="1JH-2C-FOo" firstAttribute="leading" secondItem="OMS-WA-kIt" secondAttribute="leading" id="PcX-Vx-mAO"/>
-                                            <constraint firstItem="1JH-2C-FOo" firstAttribute="top" secondItem="OMS-WA-kIt" secondAttribute="top" id="lkX-eF-ynZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="1JH-2C-FOo" secondAttribute="trailing" id="y59-5B-6pT"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="nzW-zb-PZh" firstAttribute="leading" secondItem="r3b-Ny-uUJ" secondAttribute="leading" id="1jI-4H-ixt"/>
-                            <constraint firstAttribute="trailing" secondItem="nzW-zb-PZh" secondAttribute="trailing" id="9p4-q4-UMW"/>
-                            <constraint firstItem="nzW-zb-PZh" firstAttribute="top" secondItem="r3b-Ny-uUJ" secondAttribute="top" id="PP1-eM-MHR"/>
-                            <constraint firstAttribute="bottom" secondItem="nzW-zb-PZh" secondAttribute="bottom" id="Tn1-6G-39Z"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Church Name" id="Hul-CB-wji"/>
-                    <connections>
-                        <outlet property="contentScroller" destination="nzW-zb-PZh" id="OY3-JA-lsC"/>
-                        <outlet property="navigationToolbar" destination="1JH-2C-FOo" id="tzm-Oa-ZxL"/>
-                        <outlet property="view" destination="OMS-WA-kIt" id="a5D-EV-cd0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9zz-ml-aF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="823" y="-145"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qsc-Pb-yBl">
             <objects>
@@ -221,6 +162,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mz1-wN-Fb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="463" y="-442"/>
+        </scene>
+        <!--Church Main View Controller-->
+        <scene sceneID="YED-2K-ZTH">
+            <objects>
+                <viewController storyboardIdentifier="ChurchMainView" automaticallyAdjustsScrollViewInsets="NO" id="Ytu-v9-c9M" customClass="ChurchMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZWZ-wM-LXH"/>
+                        <viewControllerLayoutGuide type="bottom" id="j2J-X3-Weh"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" id="ZeW-JM-eLL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYi-IB-dLM">
+                                <rect key="frame" x="0.0" y="50" width="320" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76862752437591553" green="0.78039222955703735" blue="0.80000007152557373" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UxU-UG-cvt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94117653369903564" green="0.94509810209274292" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647064924240112" green="0.97647064924240112" blue="0.97647064924240112" alpha="1" colorSpace="deviceRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                <size key="value" width="320" height="700"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </scrollView>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="navigationToolbar" destination="UxU-UG-cvt" id="jw8-iY-5kM"/>
+                        <outlet property="scrollView" destination="ZeW-JM-eLL" id="UVm-fn-UPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJc-Vo-fdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-145"/>
         </scene>
     </scenes>
     <resources>
