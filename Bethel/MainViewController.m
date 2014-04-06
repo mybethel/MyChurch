@@ -9,9 +9,11 @@
 #import "AFNetworking/AFNetworking.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MainViewController.h"
+#import "ChurchDetailViewController.h"
 #import "ChurchMainViewController.h"
 #import "ChurchLocation.h"
 #import "LocationTableCell.h"
+#import "AppDelegate.h"
 
 #define METERS_PER_MILE 1609.344;
 
@@ -212,12 +214,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"ChurchDetail"]) {
-        ChurchMainViewController *controller = [segue destinationViewController];
+        AppDelegate *app = [[UIApplication sharedApplication] delegate];
+
         if ([sender isKindOfClass:[ChurchLocation class]]) {
-            controller.location = sender;
+            app.activeLocation = sender;
             [_mapView deselectAnnotation:sender animated:YES];
         } else {
-            controller.location = [_locations objectAtIndex: [_locationsTableView indexPathForSelectedRow].row];
+            app.activeLocation = [_locations objectAtIndex: [_locationsTableView indexPathForSelectedRow].row];
             [_locationsTableView deselectRowAtIndexPath:[_locationsTableView indexPathForSelectedRow] animated:YES];
         }
     }

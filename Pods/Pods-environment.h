@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 2
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
 
+// QMBParallaxScrollViewController
+#define COCOAPODS_POD_AVAILABLE_QMBParallaxScrollViewController
+#define COCOAPODS_VERSION_MAJOR_QMBParallaxScrollViewController 0
+#define COCOAPODS_VERSION_MINOR_QMBParallaxScrollViewController 1
+#define COCOAPODS_VERSION_PATCH_QMBParallaxScrollViewController 0
+
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
 #define COCOAPODS_VERSION_MAJOR_SDWebImage 3

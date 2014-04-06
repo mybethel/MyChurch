@@ -95,17 +95,36 @@
                     <connections>
                         <outlet property="locationsTableView" destination="jtE-41-tKb" id="XtO-gi-G6N"/>
                         <outlet property="mapView" destination="PDP-sT-pTz" id="hmJ-gk-srT"/>
-                        <segue destination="83v-wG-0iO" kind="push" identifier="ChurchDetail" id="aaH-Mp-Fma"/>
+                        <segue destination="bVv-u0-BKt" kind="push" identifier="ChurchDetail" id="TYh-na-TeB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4L-l5-tyG" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31" y="-145"/>
         </scene>
+        <!--Church Detail View Controller-->
+        <scene sceneID="UqT-CL-kkt">
+            <objects>
+                <viewController id="bVv-u0-BKt" customClass="ChurchDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XwP-B3-dOn"/>
+                        <viewControllerLayoutGuide type="bottom" id="GGK-A0-xCV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3UO-20-Lnh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pni-Pv-SBJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKw-bq-8Vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="-145"/>
+        </scene>
         <!--Church Main View Controller - Church Name-->
         <scene sceneID="jlB-Lx-kbu">
             <objects>
-                <viewController id="83v-wG-0iO" customClass="ChurchMainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChurchMainView" id="83v-wG-0iO" customClass="ChurchMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ucX-LP-tgA"/>
                         <viewControllerLayoutGuide type="bottom" id="Xlj-IT-Tee"/>
@@ -113,13 +132,53 @@
                     <view key="view" contentMode="scaleToFill" id="r3b-Ny-uUJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzW-zb-PZh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMS-WA-kIt">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1JH-2C-FOo">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rcG-Y2-Fqh">
+                                                <rect key="frame" x="104" y="489" width="94" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </stepper>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="1JH-2C-FOo" firstAttribute="leading" secondItem="OMS-WA-kIt" secondAttribute="leading" id="PcX-Vx-mAO"/>
+                                            <constraint firstItem="1JH-2C-FOo" firstAttribute="top" secondItem="OMS-WA-kIt" secondAttribute="top" id="lkX-eF-ynZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="1JH-2C-FOo" secondAttribute="trailing" id="y59-5B-6pT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nzW-zb-PZh" firstAttribute="leading" secondItem="r3b-Ny-uUJ" secondAttribute="leading" id="1jI-4H-ixt"/>
+                            <constraint firstAttribute="trailing" secondItem="nzW-zb-PZh" secondAttribute="trailing" id="9p4-q4-UMW"/>
+                            <constraint firstItem="nzW-zb-PZh" firstAttribute="top" secondItem="r3b-Ny-uUJ" secondAttribute="top" id="PP1-eM-MHR"/>
+                            <constraint firstAttribute="bottom" secondItem="nzW-zb-PZh" secondAttribute="bottom" id="Tn1-6G-39Z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Church Name" id="Hul-CB-wji"/>
+                    <connections>
+                        <outlet property="contentScroller" destination="nzW-zb-PZh" id="OY3-JA-lsC"/>
+                        <outlet property="navigationToolbar" destination="1JH-2C-FOo" id="tzm-Oa-ZxL"/>
+                        <outlet property="view" destination="OMS-WA-kIt" id="a5D-EV-cd0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9zz-ml-aF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="-145"/>
+            <point key="canvasLocation" x="823" y="-145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qsc-Pb-yBl">
@@ -141,8 +200,31 @@
             </objects>
             <point key="canvasLocation" x="-464" y="-145"/>
         </scene>
+        <!--Church Gallery View Controller-->
+        <scene sceneID="kdd-V5-EWl">
+            <objects>
+                <viewController storyboardIdentifier="ChurchGalleryView" automaticallyAdjustsScrollViewInsets="NO" id="c6U-iV-gvS" customClass="ChurchGalleryViewController" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TemporaryImage.jpg" id="ZJ5-MF-yri">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="200"/>
+                    <connections>
+                        <outlet property="imageView" destination="ZJ5-MF-yri" id="j6F-4r-yP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mz1-wN-Fb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="-442"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="TemporaryImage.jpg" width="1024" height="765"/>
         <image name="TemporaryTableCell.png" width="319" height="96"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.57647061347961426" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>

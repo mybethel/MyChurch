@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChurchLocation.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) ChurchLocation *activeLocation;
+@property (nonatomic, retain) UIColor *interfaceColor;
 
 @end

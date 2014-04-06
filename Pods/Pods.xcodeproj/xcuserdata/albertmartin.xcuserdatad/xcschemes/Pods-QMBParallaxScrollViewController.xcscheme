@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A94433A1419C4133A0CF6ADD"
-               BuildableName = "libPods.a"
-               BlueprintName = "Pods"
+               BlueprintIdentifier = "E77E90B5AC5C4B8D88F2C799"
+               BuildableName = "libPods-QMBParallaxScrollViewController.a"
+               BlueprintName = "Pods-QMBParallaxScrollViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

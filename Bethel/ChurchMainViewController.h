@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QMBParallaxScrollViewController.h"
 #import "SVSegmentedControl.h"
 #import "ChurchLocation.h"
 
-@interface ChurchMainViewController : UIViewController
+@interface ChurchMainViewController : UIViewController <QMBParallaxScrollViewHolder>
 
-@property (nonatomic, retain) NSString *ministryId;
-@property (nonatomic, retain) UIColor *interfaceColor;
-@property (nonatomic, retain) ChurchLocation *location;
+@property (weak, nonatomic) IBOutlet UIScrollView *contentScroller;
+@property (weak, nonatomic) IBOutlet UIView *navigationToolbar;
 
 - (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl;
 

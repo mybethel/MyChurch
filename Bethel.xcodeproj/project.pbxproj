@@ -12,6 +12,9 @@
 		860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5218F07E08007AB29C /* LocationTableCell.m */; };
 		860F9A5918F0A267007AB29C /* TemporaryTableCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5818F0A267007AB29C /* TemporaryTableCell@2x.png */; };
 		860F9A5B18F0A276007AB29C /* Placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5A18F0A276007AB29C /* Placeholder@2x.png */; };
+		860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */; };
+		860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */; };
+		860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A6218F1FF38007AB29C /* ChurchGalleryViewController.m */; };
 		863ED8631839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
 		863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8641839A22000AB7A6A /* CoreGraphics.framework */; };
 		863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8661839A22000AB7A6A /* UIKit.framework */; };
@@ -49,6 +52,11 @@
 		860F9A5218F07E08007AB29C /* LocationTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableCell.m; sourceTree = "<group>"; };
 		860F9A5818F0A267007AB29C /* TemporaryTableCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TemporaryTableCell@2x.png"; path = "Resources/TemporaryTableCell@2x.png"; sourceTree = SOURCE_ROOT; };
 		860F9A5A18F0A276007AB29C /* Placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Placeholder@2x.png"; path = "Resources/Placeholder@2x.png"; sourceTree = SOURCE_ROOT; };
+		860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TemporaryImage.jpg; path = Resources/TemporaryImage.jpg; sourceTree = SOURCE_ROOT; };
+		860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchDetailViewController.h; sourceTree = "<group>"; };
+		860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchDetailViewController.m; sourceTree = "<group>"; };
+		860F9A6118F1FF38007AB29C /* ChurchGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchGalleryViewController.h; sourceTree = "<group>"; };
+		860F9A6218F1FF38007AB29C /* ChurchGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchGalleryViewController.m; sourceTree = "<group>"; };
 		863ED85F1839A22000AB7A6A /* Bethel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bethel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8621839A22000AB7A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863ED8641839A22000AB7A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,8 +151,12 @@
 				863ED8741839A22000AB7A6A /* Main.storyboard */,
 				863ED8771839A22000AB7A6A /* MainViewController.h */,
 				863ED8781839A22000AB7A6A /* MainViewController.m */,
+				860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */,
+				860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */,
 				860F9A4E18ECF346007AB29C /* ChurchMainViewController.h */,
 				860F9A4F18ECF346007AB29C /* ChurchMainViewController.m */,
+				860F9A6118F1FF38007AB29C /* ChurchGalleryViewController.h */,
+				860F9A6218F1FF38007AB29C /* ChurchGalleryViewController.m */,
 				863ED89C1839A9D900AB7A6A /* ChurchLocation.h */,
 				863ED89D1839A9D900AB7A6A /* ChurchLocation.m */,
 				860F9A5118F07E08007AB29C /* LocationTableCell.h */,
@@ -154,6 +166,7 @@
 				863ED87D1839A22000AB7A6A /* Images.xcassets */,
 				860F9A5818F0A267007AB29C /* TemporaryTableCell@2x.png */,
 				860F9A5A18F0A276007AB29C /* Placeholder@2x.png */,
+				860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */,
 				863ED8691839A22000AB7A6A /* Supporting Files */,
 			);
 			path = Bethel;
@@ -271,6 +284,7 @@
 				860F9A5918F0A267007AB29C /* TemporaryTableCell@2x.png in Resources */,
 				863ED86D1839A22000AB7A6A /* InfoPlist.strings in Resources */,
 				863ED8761839A22000AB7A6A /* Main.storyboard in Resources */,
+				860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +338,12 @@
 			files = (
 				863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */,
 				860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */,
+				860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */,
 				863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */,
 				860F9A5018ECF346007AB29C /* ChurchMainViewController.m in Sources */,
 				863ED8791839A22000AB7A6A /* MainViewController.m in Sources */,
 				863ED87C1839A22000AB7A6A /* FlipsideViewController.m in Sources */,
+				860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */,
 				863ED86F1839A22000AB7A6A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
