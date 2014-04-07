@@ -15,6 +15,12 @@
 		860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */; };
 		860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */; };
 		860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A6218F1FF38007AB29C /* ChurchGalleryViewController.m */; };
+		860F9A6718F23953007AB29C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860F9A6618F23953007AB29C /* CoreText.framework */; };
+		860F9A7518F23CEB007AB29C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860F9A7418F23CEB007AB29C /* QuartzCore.framework */; };
+		860F9A7E18F24033007AB29C /* MarkdownTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7818F24033007AB29C /* MarkdownTokenizer.m */; };
+		860F9A7F18F24033007AB29C /* MarkdownTokens.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7A18F24033007AB29C /* MarkdownTokens.m */; };
+		860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */; };
+		860F9A8318F240C2007AB29C /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8118F240C2007AB29C /* fmemopen.c */; };
 		863ED8631839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
 		863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8641839A22000AB7A6A /* CoreGraphics.framework */; };
 		863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8661839A22000AB7A6A /* UIKit.framework */; };
@@ -57,6 +63,16 @@
 		860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchDetailViewController.m; sourceTree = "<group>"; };
 		860F9A6118F1FF38007AB29C /* ChurchGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchGalleryViewController.h; sourceTree = "<group>"; };
 		860F9A6218F1FF38007AB29C /* ChurchGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchGalleryViewController.m; sourceTree = "<group>"; };
+		860F9A6618F23953007AB29C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		860F9A7418F23CEB007AB29C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		860F9A7818F24033007AB29C /* MarkdownTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkdownTokenizer.m; sourceTree = "<group>"; };
+		860F9A7918F24033007AB29C /* MarkdownTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkdownTokens.h; sourceTree = "<group>"; };
+		860F9A7A18F24033007AB29C /* MarkdownTokens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkdownTokens.m; sourceTree = "<group>"; };
+		860F9A7B18F24033007AB29C /* NimbusMarkdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NimbusMarkdown.h; sourceTree = "<group>"; };
+		860F9A7C18F24033007AB29C /* NSAttributedStringMarkdownParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringMarkdownParser.h; sourceTree = "<group>"; };
+		860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedStringMarkdownParser.m; sourceTree = "<group>"; };
+		860F9A8118F240C2007AB29C /* fmemopen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fmemopen.c; sourceTree = "<group>"; };
+		860F9A8218F240C2007AB29C /* fmemopen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fmemopen.h; sourceTree = "<group>"; };
 		863ED85F1839A22000AB7A6A /* Bethel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bethel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8621839A22000AB7A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863ED8641839A22000AB7A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860F9A7518F23CEB007AB29C /* QuartzCore.framework in Frameworks */,
+				860F9A6718F23953007AB29C /* CoreText.framework in Frameworks */,
 				863ED89B1839A2AE00AB7A6A /* MapKit.framework in Frameworks */,
 				863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */,
 				863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */,
@@ -110,11 +128,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		860F9A7718F24023007AB29C /* Markdown */ = {
+			isa = PBXGroup;
+			children = (
+				860F9A7818F24033007AB29C /* MarkdownTokenizer.m */,
+				860F9A7918F24033007AB29C /* MarkdownTokens.h */,
+				860F9A7A18F24033007AB29C /* MarkdownTokens.m */,
+				860F9A7B18F24033007AB29C /* NimbusMarkdown.h */,
+				860F9A7C18F24033007AB29C /* NSAttributedStringMarkdownParser.h */,
+				860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */,
+				860F9A8118F240C2007AB29C /* fmemopen.c */,
+				860F9A8218F240C2007AB29C /* fmemopen.h */,
+			);
+			name = Markdown;
+			sourceTree = "<group>";
+		};
 		863ED8561839A22000AB7A6A = {
 			isa = PBXGroup;
 			children = (
 				863ED8681839A22000AB7A6A /* Bethel */,
 				863ED88A1839A22000AB7A6A /* BethelTests */,
+				860F9A7718F24023007AB29C /* Markdown */,
 				863ED8611839A22000AB7A6A /* Frameworks */,
 				863ED8601839A22000AB7A6A /* Products */,
 				26D6E6B4896D4131BCF9CA97 /* Pods.xcconfig */,
@@ -133,6 +167,8 @@
 		863ED8611839A22000AB7A6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				860F9A7418F23CEB007AB29C /* QuartzCore.framework */,
+				860F9A6618F23953007AB29C /* CoreText.framework */,
 				863ED89A1839A2AE00AB7A6A /* MapKit.framework */,
 				863ED8621839A22000AB7A6A /* Foundation.framework */,
 				863ED8641839A22000AB7A6A /* CoreGraphics.framework */,
@@ -339,11 +375,15 @@
 				863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */,
 				860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */,
 				860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */,
+				860F9A8318F240C2007AB29C /* fmemopen.c in Sources */,
 				863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */,
+				860F9A7F18F24033007AB29C /* MarkdownTokens.m in Sources */,
+				860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */,
 				860F9A5018ECF346007AB29C /* ChurchMainViewController.m in Sources */,
 				863ED8791839A22000AB7A6A /* MainViewController.m in Sources */,
 				863ED87C1839A22000AB7A6A /* FlipsideViewController.m in Sources */,
 				860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */,
+				860F9A7E18F24033007AB29C /* MarkdownTokenizer.m in Sources */,
 				863ED86F1839A22000AB7A6A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

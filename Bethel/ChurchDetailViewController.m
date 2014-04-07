@@ -21,7 +21,7 @@
     ChurchGalleryViewController *churchGalleryView = [self.storyboard instantiateViewControllerWithIdentifier:@"ChurchGalleryView"];
     ChurchMainViewController *churchMainView = [self.storyboard instantiateViewControllerWithIdentifier:@"ChurchMainView"];
     self.delegate = self;
-    
+
     [self setupWithTopViewController:churchGalleryView andTopHeight:240 andBottomViewController:churchMainView];
     
     // Change the navbar color based on the church settings.

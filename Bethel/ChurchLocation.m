@@ -8,6 +8,7 @@
 
 #import "ChurchLocation.h"
 #import <AddressBook/AddressBook.h>
+#import "NSAttributedStringMarkdownParser.h"
 
 @interface ChurchLocation ()
 
@@ -36,6 +37,13 @@
 
 - (NSString *)subtitle {
     return _name;
+}
+
+- (NSAttributedString *)description
+{
+    NSAttributedStringMarkdownParser* parser = [[NSAttributedStringMarkdownParser alloc] init];
+    parser.paragraphFont = [UIFont systemFontOfSize:15];
+    return [parser attributedStringFromMarkdownString: _ministry[@"description"]];
 }
 
 - (CLLocationCoordinate2D)coordinate {

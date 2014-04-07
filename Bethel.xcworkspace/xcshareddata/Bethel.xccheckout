@@ -12,6 +12,8 @@
 	<dict>
 		<key>57550F32-05D9-4C3C-9503-752987A77076</key>
 		<string>https://github.com/mybethel/bethel-iOS.git</string>
+		<key>F9428F59-02CE-459F-ADC4-7540BE41596D</key>
+		<string>ssh://github.com/Uncodin/bypass.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Bethel.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>57550F32-05D9-4C3C-9503-752987A77076</key>
 		<string>..</string>
+		<key>F9428F59-02CE-459F-ADC4-7540BE41596D</key>
+		<string>../../../bypass</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/mybethel/bethel-iOS.git</string>
@@ -35,6 +39,14 @@
 			<string>57550F32-05D9-4C3C-9503-752987A77076</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Bethel</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F9428F59-02CE-459F-ADC4-7540BE41596D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bypass</string>
 		</dict>
 	</array>
 </dict>
