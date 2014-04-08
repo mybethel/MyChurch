@@ -163,7 +163,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ctN-Lf-qLI"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" id="ZeW-JM-eLL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYi-IB-dLM">
@@ -176,13 +176,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117653369903564" green="0.94509810209274292" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubR-Oq-9z0">
-                                <rect key="frame" x="10" y="59" width="300" height="489"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubR-Oq-9z0">
+                                <rect key="frame" x="0.0" y="50" width="320" height="283"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="7VM-GN-mQK"/>
-                                    <constraint firstAttribute="height" constant="200" id="o1e-sM-UfD"/>
+                                    <constraint firstAttribute="width" constant="320" id="7VM-GN-mQK"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -207,11 +206,12 @@
                         </userDefinedRuntimeAttributes>
                     </scrollView>
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="400"/>
                     <connections>
                         <outlet property="churchDescription" destination="ubR-Oq-9z0" id="FyQ-iQ-mp8"/>
                         <outlet property="navigationToolbar" destination="UxU-UG-cvt" id="jw8-iY-5kM"/>
                         <outlet property="scrollView" destination="ZeW-JM-eLL" id="UVm-fn-UPc"/>
-                        <outlet property="textViewHeightConstraint" destination="o1e-sM-UfD" id="bQU-jX-rZW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJc-Vo-fdi" userLabel="First Responder" sceneMemberID="firstResponder"/>

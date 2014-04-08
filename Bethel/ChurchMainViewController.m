@@ -11,8 +11,6 @@
 
 @interface ChurchMainViewController()
 
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
-
 @end
 
 @implementation ChurchMainViewController
@@ -41,9 +39,7 @@
     navigation.center = CGPointMake(160, 25);
     
     _churchDescription.attributedText = [(AppDelegate *)[[UIApplication sharedApplication] delegate] activeLocation].description;
-    CGSize textViewSize = [_churchDescription sizeThatFits:CGSizeMake(_churchDescription.frame.size.width, FLT_MAX)];
-    self.textViewHeightConstraint.constant = textViewSize.height;
-    [_churchDescription layoutIfNeeded];
+    [_churchDescription setTextContainerInset:UIEdgeInsetsMake(10, 4, 10, 4)];
 }
 
 - (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl {
