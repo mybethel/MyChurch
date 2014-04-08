@@ -23,6 +23,7 @@
     self.delegate = self;
 
     [self setupWithTopViewController:churchGalleryView andTopHeight:240 andBottomViewController:churchMainView];
+    self.minimumTopHeight = 180;
     
     // Change the navbar color based on the church settings.
     self.navigationController.navigationBar.barTintColor = [(AppDelegate *)[[UIApplication sharedApplication] delegate] interfaceColor];

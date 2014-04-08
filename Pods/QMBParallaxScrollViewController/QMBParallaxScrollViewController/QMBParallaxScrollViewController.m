@@ -39,7 +39,7 @@
 #pragma mark - QMBParallaxScrollViewController Methods
 
 - (void)setupWithTopViewController:(UIViewController *)topViewController andTopHeight:(CGFloat)height andBottomViewController:(UIViewController<QMBParallaxScrollViewHolder> *)bottomViewController{
-    
+    self.minimumTopHeight = 0;
     self.topViewController = topViewController;
     self.bottomViewController = bottomViewController;
     self.topHeight = height;
@@ -192,9 +192,9 @@
         }
         
         if (y >= _topHeight) {
-            _parallaxScrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+            _parallaxScrollView.contentInset = UIEdgeInsetsMake(_minimumTopHeight, 0, 0, 0);
         } else {
-            _parallaxScrollView.contentInset = UIEdgeInsetsMake(_currentTopHeight - y , 0, 0, 0);
+            _parallaxScrollView.contentInset = UIEdgeInsetsMake(MAX(_currentTopHeight - y, _minimumTopHeight) , 0, 0, 0);
         }
         
  
