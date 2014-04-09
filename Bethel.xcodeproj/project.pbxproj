@@ -21,6 +21,7 @@
 		860F9A7F18F24033007AB29C /* MarkdownTokens.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7A18F24033007AB29C /* MarkdownTokens.m */; };
 		860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */; };
 		860F9A8318F240C2007AB29C /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8118F240C2007AB29C /* fmemopen.c */; };
+		860F9A8618F4C447007AB29C /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8518F4C447007AB29C /* MainNavigationController.m */; };
 		863ED8631839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
 		863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8641839A22000AB7A6A /* CoreGraphics.framework */; };
 		863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8661839A22000AB7A6A /* UIKit.framework */; };
@@ -73,6 +74,8 @@
 		860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedStringMarkdownParser.m; sourceTree = "<group>"; };
 		860F9A8118F240C2007AB29C /* fmemopen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fmemopen.c; sourceTree = "<group>"; };
 		860F9A8218F240C2007AB29C /* fmemopen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fmemopen.h; sourceTree = "<group>"; };
+		860F9A8418F4C447007AB29C /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		860F9A8518F4C447007AB29C /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		863ED85F1839A22000AB7A6A /* Bethel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bethel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8621839A22000AB7A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863ED8641839A22000AB7A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -187,6 +190,8 @@
 				863ED8741839A22000AB7A6A /* Main.storyboard */,
 				863ED8771839A22000AB7A6A /* MainViewController.h */,
 				863ED8781839A22000AB7A6A /* MainViewController.m */,
+				860F9A8418F4C447007AB29C /* MainNavigationController.h */,
+				860F9A8518F4C447007AB29C /* MainNavigationController.m */,
 				860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */,
 				860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */,
 				860F9A4E18ECF346007AB29C /* ChurchMainViewController.h */,
@@ -376,6 +381,7 @@
 				860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */,
 				860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */,
 				860F9A8318F240C2007AB29C /* fmemopen.c in Sources */,
+				860F9A8618F4C447007AB29C /* MainNavigationController.m in Sources */,
 				863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */,
 				860F9A7F18F24033007AB29C /* MarkdownTokens.m in Sources */,
 				860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */,

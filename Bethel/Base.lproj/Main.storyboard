@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="463" y="-145"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="Qsc-Pb-yBl">
             <objects>
-                <navigationController definesPresentationContext="YES" id="gjw-Uo-6g9" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="gjw-Uo-6g9" customClass="MainNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IkX-le-hwu">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
