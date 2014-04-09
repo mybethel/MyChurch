@@ -24,6 +24,24 @@
             </objects>
             <point key="canvasLocation" x="-23" y="-442"/>
         </scene>
+        <!--Location Aware Splash-->
+        <scene sceneID="11R-10-ojC">
+            <objects>
+                <viewController id="lGy-Gh-wME" customClass="LocationAwareSplash" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xhL-mF-6sB"/>
+                        <viewControllerLayoutGuide type="bottom" id="OJ7-zO-OAu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ulP-Kj-NoZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ru8-M7-pHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-464" y="533"/>
+        </scene>
         <!--Results View Controller-->
         <scene sceneID="B2a-va-FKc">
             <objects>
@@ -99,7 +117,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bethel" id="131-lj-mq8"/>
+                    <navigationItem key="navigationItem" title="Bethel" id="131-lj-mq8">
+                        <barButtonItem key="rightBarButtonItem" title="Debug" id="BWG-pk-2xA">
+                            <connections>
+                                <segue destination="lGy-Gh-wME" kind="custom" customClass="DATBlurSegue" id="3Tt-IP-ISo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Oc-a1-zPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

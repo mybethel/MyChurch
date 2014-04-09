@@ -27,6 +27,7 @@
 		860F9A8F18F4D867007AB29C /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8E18F4D867007AB29C /* ResultsViewController.m */; };
 		860F9AAC18F4F102007AB29C /* DATBlurSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AA918F4F102007AB29C /* DATBlurSegue.m */; };
 		860F9AAD18F4F102007AB29C /* DATBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AAB18F4F102007AB29C /* DATBlurView.m */; };
+		860F9AB018F4F444007AB29C /* LocationAwareSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */; };
 		863ED8631839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
 		863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8641839A22000AB7A6A /* CoreGraphics.framework */; };
 		863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8661839A22000AB7A6A /* UIKit.framework */; };
@@ -90,6 +91,8 @@
 		860F9AA918F4F102007AB29C /* DATBlurSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATBlurSegue.m; sourceTree = "<group>"; };
 		860F9AAA18F4F102007AB29C /* DATBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATBlurView.h; sourceTree = "<group>"; };
 		860F9AAB18F4F102007AB29C /* DATBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATBlurView.m; sourceTree = "<group>"; };
+		860F9AAE18F4F444007AB29C /* LocationAwareSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAwareSplash.h; sourceTree = "<group>"; };
+		860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAwareSplash.m; sourceTree = "<group>"; };
 		863ED85F1839A22000AB7A6A /* Bethel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bethel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8621839A22000AB7A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863ED8641839A22000AB7A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -230,6 +233,8 @@
 				863ED89D1839A9D900AB7A6A /* ChurchLocation.m */,
 				860F9A5118F07E08007AB29C /* LocationTableCell.h */,
 				860F9A5218F07E08007AB29C /* LocationTableCell.m */,
+				860F9AAE18F4F444007AB29C /* LocationAwareSplash.h */,
+				860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */,
 				863ED87A1839A22000AB7A6A /* FlipsideViewController.h */,
 				863ED87B1839A22000AB7A6A /* FlipsideViewController.m */,
 				863ED87D1839A22000AB7A6A /* Images.xcassets */,
@@ -410,6 +415,7 @@
 				863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */,
 				860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */,
 				860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */,
+				860F9AB018F4F444007AB29C /* LocationAwareSplash.m in Sources */,
 				860F9A8318F240C2007AB29C /* fmemopen.c in Sources */,
 				860F9A8618F4C447007AB29C /* MainNavigationController.m in Sources */,
 				863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */,
