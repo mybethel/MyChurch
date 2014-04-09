@@ -23,7 +23,7 @@
     sourceViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
     
     DATBlurView* blur = [[DATBlurView alloc] initWithFrame:destinationViewController.view.bounds];
-    blur.tintColor = destinationViewController.view.backgroundColor;
+    //blur.tintColor = destinationViewController.view.backgroundColor;
 
     blur.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     destinationViewController.view.backgroundColor = [UIColor clearColor];

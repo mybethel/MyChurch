@@ -20,4 +20,9 @@
     return UIStatusBarStyleLightContent;
 }
 
+- (IBAction)closeSplash:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

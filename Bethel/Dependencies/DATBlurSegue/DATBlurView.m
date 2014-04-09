@@ -38,6 +38,7 @@
     
     self.toolbar = [[UIToolbar alloc] initWithFrame:self.bounds];
     self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.toolbar.barStyle = UIBarStyleBlackOpaque;
     [self insertSubview:self.toolbar atIndex:0];
     
     self.tintView = [[UIView alloc] initWithFrame:self.bounds];
