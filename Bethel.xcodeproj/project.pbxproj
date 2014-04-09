@@ -25,6 +25,8 @@
 		860F9A8918F4D762007AB29C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8818F4D762007AB29C /* MainViewController.m */; };
 		860F9A8C18F4D80A007AB29C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8B18F4D80A007AB29C /* MapViewController.m */; };
 		860F9A8F18F4D867007AB29C /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8E18F4D867007AB29C /* ResultsViewController.m */; };
+		860F9AAC18F4F102007AB29C /* DATBlurSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AA918F4F102007AB29C /* DATBlurSegue.m */; };
+		860F9AAD18F4F102007AB29C /* DATBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AAB18F4F102007AB29C /* DATBlurView.m */; };
 		863ED8631839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
 		863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8641839A22000AB7A6A /* CoreGraphics.framework */; };
 		863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8661839A22000AB7A6A /* UIKit.framework */; };
@@ -84,6 +86,10 @@
 		860F9A8B18F4D80A007AB29C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		860F9A8D18F4D867007AB29C /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		860F9A8E18F4D867007AB29C /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		860F9AA818F4F102007AB29C /* DATBlurSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATBlurSegue.h; sourceTree = "<group>"; };
+		860F9AA918F4F102007AB29C /* DATBlurSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATBlurSegue.m; sourceTree = "<group>"; };
+		860F9AAA18F4F102007AB29C /* DATBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATBlurView.h; sourceTree = "<group>"; };
+		860F9AAB18F4F102007AB29C /* DATBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATBlurView.m; sourceTree = "<group>"; };
 		863ED85F1839A22000AB7A6A /* Bethel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bethel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8621839A22000AB7A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863ED8641839A22000AB7A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +156,18 @@
 				860F9A8218F240C2007AB29C /* fmemopen.h */,
 			);
 			name = Markdown;
+			sourceTree = "<group>";
+		};
+		860F9A9418F4F0DE007AB29C /* DATBlurSegue */ = {
+			isa = PBXGroup;
+			children = (
+				860F9AA818F4F102007AB29C /* DATBlurSegue.h */,
+				860F9AA918F4F102007AB29C /* DATBlurSegue.m */,
+				860F9AAA18F4F102007AB29C /* DATBlurView.h */,
+				860F9AAB18F4F102007AB29C /* DATBlurView.m */,
+			);
+			name = DATBlurSegue;
+			path = Dependencies/DATBlurSegue;
 			sourceTree = "<group>";
 		};
 		863ED8561839A22000AB7A6A = {
@@ -226,6 +244,7 @@
 		863ED8691839A22000AB7A6A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				860F9A9418F4F0DE007AB29C /* DATBlurSegue */,
 				863ED86A1839A22000AB7A6A /* Bethel-Info.plist */,
 				863ED86B1839A22000AB7A6A /* InfoPlist.strings */,
 				863ED86E1839A22000AB7A6A /* main.m */,
@@ -397,8 +416,10 @@
 				860F9A7F18F24033007AB29C /* MarkdownTokens.m in Sources */,
 				860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */,
 				860F9A8918F4D762007AB29C /* MainViewController.m in Sources */,
+				860F9AAC18F4F102007AB29C /* DATBlurSegue.m in Sources */,
 				860F9A5018ECF346007AB29C /* ChurchMainViewController.m in Sources */,
 				860F9A8C18F4D80A007AB29C /* MapViewController.m in Sources */,
+				860F9AAD18F4F102007AB29C /* DATBlurView.m in Sources */,
 				863ED87C1839A22000AB7A6A /* FlipsideViewController.m in Sources */,
 				860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */,
 				860F9A7E18F24033007AB29C /* MarkdownTokenizer.m in Sources */,
