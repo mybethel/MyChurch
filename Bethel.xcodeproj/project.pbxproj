@@ -22,6 +22,9 @@
 		860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */; };
 		860F9A8318F240C2007AB29C /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8118F240C2007AB29C /* fmemopen.c */; };
 		860F9A8618F4C447007AB29C /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8518F4C447007AB29C /* MainNavigationController.m */; };
+		860F9A8918F4D762007AB29C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8818F4D762007AB29C /* MainViewController.m */; };
+		860F9A8C18F4D80A007AB29C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8B18F4D80A007AB29C /* MapViewController.m */; };
+		860F9A8F18F4D867007AB29C /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8E18F4D867007AB29C /* ResultsViewController.m */; };
 		863ED8631839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
 		863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8641839A22000AB7A6A /* CoreGraphics.framework */; };
 		863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8661839A22000AB7A6A /* UIKit.framework */; };
@@ -29,7 +32,6 @@
 		863ED86F1839A22000AB7A6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED86E1839A22000AB7A6A /* main.m */; };
 		863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED8721839A22000AB7A6A /* AppDelegate.m */; };
 		863ED8761839A22000AB7A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863ED8741839A22000AB7A6A /* Main.storyboard */; };
-		863ED8791839A22000AB7A6A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED8781839A22000AB7A6A /* MainViewController.m */; };
 		863ED87C1839A22000AB7A6A /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED87B1839A22000AB7A6A /* FlipsideViewController.m */; };
 		863ED87E1839A22000AB7A6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863ED87D1839A22000AB7A6A /* Images.xcassets */; };
 		863ED8851839A22000AB7A6A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8841839A22000AB7A6A /* XCTest.framework */; };
@@ -76,6 +78,12 @@
 		860F9A8218F240C2007AB29C /* fmemopen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fmemopen.h; sourceTree = "<group>"; };
 		860F9A8418F4C447007AB29C /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		860F9A8518F4C447007AB29C /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		860F9A8718F4D762007AB29C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		860F9A8818F4D762007AB29C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		860F9A8A18F4D80A007AB29C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		860F9A8B18F4D80A007AB29C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		860F9A8D18F4D867007AB29C /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		860F9A8E18F4D867007AB29C /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		863ED85F1839A22000AB7A6A /* Bethel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bethel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8621839A22000AB7A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863ED8641839A22000AB7A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,8 +95,6 @@
 		863ED8711839A22000AB7A6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		863ED8721839A22000AB7A6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		863ED8751839A22000AB7A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		863ED8771839A22000AB7A6A /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		863ED8781839A22000AB7A6A /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		863ED87A1839A22000AB7A6A /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		863ED87B1839A22000AB7A6A /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		863ED87D1839A22000AB7A6A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -188,8 +194,12 @@
 				863ED8711839A22000AB7A6A /* AppDelegate.h */,
 				863ED8721839A22000AB7A6A /* AppDelegate.m */,
 				863ED8741839A22000AB7A6A /* Main.storyboard */,
-				863ED8771839A22000AB7A6A /* MainViewController.h */,
-				863ED8781839A22000AB7A6A /* MainViewController.m */,
+				860F9A8718F4D762007AB29C /* MainViewController.h */,
+				860F9A8818F4D762007AB29C /* MainViewController.m */,
+				860F9A8A18F4D80A007AB29C /* MapViewController.h */,
+				860F9A8B18F4D80A007AB29C /* MapViewController.m */,
+				860F9A8D18F4D867007AB29C /* ResultsViewController.h */,
+				860F9A8E18F4D867007AB29C /* ResultsViewController.m */,
 				860F9A8418F4C447007AB29C /* MainNavigationController.h */,
 				860F9A8518F4C447007AB29C /* MainNavigationController.m */,
 				860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */,
@@ -377,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860F9A8F18F4D867007AB29C /* ResultsViewController.m in Sources */,
 				863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */,
 				860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */,
 				860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */,
@@ -385,8 +396,9 @@
 				863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */,
 				860F9A7F18F24033007AB29C /* MarkdownTokens.m in Sources */,
 				860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */,
+				860F9A8918F4D762007AB29C /* MainViewController.m in Sources */,
 				860F9A5018ECF346007AB29C /* ChurchMainViewController.m in Sources */,
-				863ED8791839A22000AB7A6A /* MainViewController.m in Sources */,
+				860F9A8C18F4D80A007AB29C /* MapViewController.m in Sources */,
 				863ED87C1839A22000AB7A6A /* FlipsideViewController.m in Sources */,
 				860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */,
 				860F9A7E18F24033007AB29C /* MarkdownTokenizer.m in Sources */,

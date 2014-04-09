@@ -6,24 +6,15 @@
 //  Copyright (c) 2013 Albert Martin. All rights reserved.
 //
 
-#import <MapKit/MapKit.h>
-#import "FlipsideViewController.h"
+#import <UIKit/UIKit.h>
+#import "QMBParallaxScrollViewController.h"
+#import "AppDelegate.h"
+#import "ChurchLocation.h"
 
-@interface MainViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
-{
-    CLLocationManager *locationManager;
-    CLLocationCoordinate2D currentCenter;
-    int currentDist;
-    BOOL firstLaunch;
-}
+@interface MainViewController : QMBParallaxScrollViewController <QMBParallaxScrollViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UITableView *locationsTableView;
-@property (nonatomic, retain) NSArray *locationResults;
-@property (nonatomic, retain) NSDictionary *ministryResults;
-
-- (UIColor *)interfaceColor;
-
-- (IBAction)showDebugDistance:(id)sender;
+@property (nonatomic, retain) NSMutableArray *locations;
+@property (nonatomic, retain) UIColor *interfaceColor;
+@property (nonatomic, retain) UITableView *locationsTableView;
 
 @end
