@@ -128,30 +128,44 @@
     // todo: Pin clustering if we're all the way zoomed out!
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:locationQuery parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        for (id<MKAnnotation> annotation in _mapView.annotations) {
-            if ([annotation isKindOfClass:[ChurchLocation class]]) {
-                [_mapView removeAnnotation:annotation];
-            }
-        }
         NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
         
         _locationResults = [locations objectForKey: @"locations"];
         _ministryResults = [locations objectForKey: @"ministries"];
         
         ChurchLocation *locationResult;
-        [_locations removeAllObjects];
+        NSMutableArray *keepLocations = [[NSMutableArray alloc] init];
+        BOOL skipLocationAdd;
         
         for (id location in _locationResults) {
-            CLLocationCoordinate2D coordinate;
-            coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
-            coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
-            
-            locationResult = [[ChurchLocation alloc] initWithName:location[@"obj"][@"name"] ministry:_ministryResults[location[@"obj"][@"ministry"]] coordinate:coordinate];
-            
-            [_mapView addAnnotation:locationResult];
-            [_locations addObject:locationResult];
+            skipLocationAdd = FALSE;
+            for (ChurchLocation *oldLocation in _locations) {
+                NSString *locationId = oldLocation.uuid;
+                if ([locationId isEqualToString: location[@"obj"][@"_id"]]) {
+                    skipLocationAdd = TRUE;
+                    [keepLocations addObject:locationId];
+                }
+            }
+            if (!skipLocationAdd) {
+                CLLocationCoordinate2D coordinate;
+                coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
+                coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
+
+                locationResult = [[ChurchLocation alloc] initWithLocation:location[@"obj"] ministry:_ministryResults[location[@"obj"][@"ministry"]] coordinate:coordinate];
+                [keepLocations addObject:location[@"obj"][@"_id"]];
+
+                [_mapView addAnnotation:locationResult];
+                [_locations addObject:locationResult];
+            }
+        }
+        for (id<MKAnnotation> annotation in _mapView.annotations) {
+            if ([annotation isKindOfClass:[ChurchLocation class]] && ![keepLocations containsObject: [(ChurchLocation *)annotation uuid]]) {
+                [_mapView removeAnnotation:annotation];
+                [_locations removeObjectIdenticalTo:annotation];
+            }
         }
         
+        [keepLocations removeAllObjects];
         [_locationsTableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

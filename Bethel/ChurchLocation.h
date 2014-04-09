@@ -11,13 +11,15 @@
 
 @interface ChurchLocation : NSObject <MKAnnotation>
 
+@property (nonatomic, copy) NSString *uuid;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *ministryName;
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSAttributedString *description;
+@property (nonatomic, copy) NSDictionary *location;
 @property (nonatomic, copy) NSDictionary *ministry;
 
-- (id)initWithName:(NSString*)name ministry:(NSDictionary*)ministry coordinate:(CLLocationCoordinate2D)coordinate;
+- (id)initWithLocation:(NSDictionary *)location ministry:(NSDictionary *)ministry coordinate:(CLLocationCoordinate2D)coordinate;
 - (MKMapItem*)mapItem;
 
 @end

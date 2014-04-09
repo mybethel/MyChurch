@@ -18,17 +18,19 @@
 
 @implementation ChurchLocation
 
-- (id)initWithName:(NSString*)name ministry:(NSDictionary *)ministry coordinate:(CLLocationCoordinate2D)coordinate {
+- (id)initWithLocation:(NSDictionary *)location ministry:(NSDictionary *)ministry coordinate:(CLLocationCoordinate2D)coordinate
+{
     if ((self = [super init])) {
-        if ([name isKindOfClass:[NSString class]]) {
-            self.name = name;
-        } else {
-            self.name = @"Unknown";
-        }
+        self.name = location[@"name"];
+        self.location = location;
         self.ministry = ministry;
         self.theCoordinate = coordinate;
     }
     return self;
+}
+
+- (NSString *)uuid {
+    return _location[@"_id"];
 }
 
 - (NSString *)title {
