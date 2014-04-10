@@ -7,6 +7,7 @@
 //
 
 #import "AFNetworking/AFNetworking.h"
+#import "AppDelegate.h"
 #import "MapViewController.h"
 #import "ChurchLocation.h"
 
@@ -142,7 +143,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"ChurchDetail"]) {
-        AppDelegate *app = [[UIApplication sharedApplication] delegate];
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         app.activeLocation = sender;
         [_mapView deselectAnnotation:sender animated:YES];
     }
