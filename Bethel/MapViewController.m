@@ -23,26 +23,16 @@
     [locationManager setDistanceFilter: kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy: kCLLocationAccuracyBest];
     
+    UIPanGestureRecognizer* panRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(updateMapPins:)];
+    [panRec setDelegate:self];
+    [self.mapView addGestureRecognizer:panRec];
+    
     firstLaunch = TRUE;
 }
 
-- (IBAction)showDebugDistance:(id)sender
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
-    if ([_locationResults count]) {
-        CLLocation *pinLocation = [[CLLocation alloc] initWithLatitude: [[_locationResults objectAtIndex: 0][@"obj"][@"loc"][1] floatValue] longitude: [[_locationResults objectAtIndex: 0][@"obj"][@"loc"][0] floatValue]];
-        CLLocation *userLocation = [[CLLocation alloc] initWithLatitude: _mapView.userLocation.coordinate.latitude longitude: _mapView.userLocation.coordinate.longitude];
-        CLLocationDistance distance = [pinLocation distanceFromLocation:userLocation];
-        
-        // If the user is within 0.2 kilometers of a church campus, they should be considered at the campus.
-        NSString *closest = [NSString stringWithFormat:@"Closest location is %4.0f meters away.", distance];
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Debug"
-                                                          message:closest
-                                                         delegate:nil
-                                                cancelButtonTitle:@"OK"
-                                                otherButtonTitles:nil];
-        
-        [message show];
-    }
+    return YES;
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
@@ -54,9 +44,10 @@
     }
 }
 
--(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
-    if (firstLaunch) return;
-
+- (void)updateMapPins:(UIGestureRecognizer*)gestureRecognizer
+{
+    if (firstLaunch || (gestureRecognizer && gestureRecognizer.state != UIGestureRecognizerStateEnded)) return;
+    
     // Get the east and west points on the map so we can calculate the zoom level of the current map view.
     MKMapRect mRect = self.mapView.visibleMapRect;
     MKMapPoint eastMapPoint = MKMapPointMake(MKMapRectGetMinX(mRect), MKMapRectGetMidY(mRect));
@@ -112,6 +103,14 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    // Allow animated map changes (no user pan/zoom) to update pin locations.
+    if (animated) {
+        [self updateMapPins: nil];
+    }
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {

@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate>
 {
     CLLocationManager *locationManager;
     CLLocationCoordinate2D currentCenter;
@@ -23,6 +23,6 @@
 @property (nonatomic, retain) NSArray *locationResults;
 @property (nonatomic, retain) NSDictionary *ministryResults;
 
-- (IBAction)showDebugDistance:(id)sender;
+- (void)updateMapPins:(UIGestureRecognizer*)gestureRecognizer;
 
 @end
