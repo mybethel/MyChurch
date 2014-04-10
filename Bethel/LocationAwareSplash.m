@@ -10,6 +10,30 @@
 
 @implementation LocationAwareSplash
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blackColor];
+
+    _welcomeTitleView = [[FBShimmeringView alloc] init];
+    _welcomeTitleView.shimmering = YES;
+    _welcomeTitleView.shimmeringBeginFadeDuration = 0.3;
+    _welcomeTitleView.shimmeringOpacity = 0.6;
+    _welcomeTitleView.shimmeringSpeed = 110;
+    _welcomeTitleView.frame = CGRectMake(0, 15, self.view.frame.size.width, 200);
+    [self.view addSubview:_welcomeTitleView];
+
+    _welcomeTitleLabel = [[UILabel alloc] initWithFrame:_welcomeTitleView.bounds];
+    _welcomeTitleLabel.text = @"Welcome to\nGlobal Community Church";
+    _welcomeTitleLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:36.0];
+    _welcomeTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _welcomeTitleLabel.numberOfLines = 4;
+    _welcomeTitleLabel.textColor = [UIColor whiteColor];
+    _welcomeTitleLabel.textAlignment = NSTextAlignmentCenter;
+
+    _welcomeTitleView.contentView = _welcomeTitleLabel;
+}
+
 - (BOOL)shouldAutorotate
 {
     return NO;

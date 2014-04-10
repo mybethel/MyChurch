@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBShimmeringView.h"
 
 @interface LocationAwareSplash : UIViewController
+
+@property (nonatomic, retain) FBShimmeringView *welcomeTitleView;
+@property (nonatomic, retain) UILabel *welcomeTitleLabel;
 
 @end

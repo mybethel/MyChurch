@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B25FB90DBB9249D9B99405ED"
-               BuildableName = "libPods-SVSegmentedControl.a"
-               BlueprintName = "Pods-SVSegmentedControl"
+               BlueprintIdentifier = "74C1B0A819CB426CB01BDC0B"
+               BuildableName = "libPods-Shimmer.a"
+               BlueprintName = "Pods-Shimmer"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
