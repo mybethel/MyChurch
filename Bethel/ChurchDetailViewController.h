@@ -18,6 +18,7 @@
 @property (nonatomic) HATransitionController *transitionController;
 
 @property (nonatomic, strong) UIView *mainView;
+@property (nonatomic, strong) UIView *topView;
 @property (nonatomic, strong) UIImageView *topImage;
 @property (nonatomic, strong) UIImageView *reflected;
 @property (nonatomic, strong) UIScrollView *scrollView;

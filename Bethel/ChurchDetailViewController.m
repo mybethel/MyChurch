@@ -76,22 +76,32 @@
 
 - (void)setupTopView
 {
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), [(HACollectionViewSmallLayout *)self.collectionView.collectionViewLayout sectionInset].top)];
-    [self.view insertSubview:topView aboveSubview:self.collectionView];
+    _topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), [(HACollectionViewSmallLayout *)self.collectionView.collectionViewLayout sectionInset].top)];
+    [self.view insertSubview:_topView aboveSubview:self.collectionView];
     
     // Setup ministry name label
     UILabel *ministryName = [[UILabel alloc] initWithFrame:CGRectMake(15, 12, 290, 0)];
     ministryName.font = [UIFont fontWithName:@"Helvetica-Bold" size:19];
     ministryName.text = self.navigationItem.title;
     [self setupLabel: ministryName];
-    [topView addSubview:ministryName];
+    [_topView addSubview:ministryName];
     
     // Setup ministry location label
     UILabel *ministryLocation = [[UILabel alloc] initWithFrame:CGRectMake(15, ministryName.frame.origin.y + CGRectGetHeight(ministryName.frame)+2, 290, 0)];
     ministryLocation.font = [UIFont fontWithName:@"Helvetica" size:13];
     ministryLocation.text = [(AppDelegate *)[[UIApplication sharedApplication] delegate] activeLocation].name;
     [self setupLabel: ministryLocation];
-    [topView addSubview:ministryLocation];
+    [_topView addSubview:ministryLocation];
+    
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(backButtonPressed)];
+    swipeGesture.direction = (UISwipeGestureRecognizerDirectionRight);
+    [_topView addGestureRecognizer:swipeGesture];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.view bringSubviewToFront:_topView];
 }
 
 - (void)backButtonPressed
