@@ -26,8 +26,8 @@
     [self.view addSubview:_welcomeTitleView];
 
     _welcomeTitleLabel = [[UILabel alloc] initWithFrame:_welcomeTitleView.bounds];
-    _welcomeTitleLabel.text = @"Welcome to\nGlobal Community Church";
-    _welcomeTitleLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:36.0];
+    _welcomeTitleLabel.text = [NSString stringWithFormat:@"Welcome to\n%@", [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].title];
+    _welcomeTitleLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:37.0];
     _welcomeTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _welcomeTitleLabel.numberOfLines = 4;
     _welcomeTitleLabel.textColor = [UIColor whiteColor];
