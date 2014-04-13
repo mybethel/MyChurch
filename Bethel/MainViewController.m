@@ -55,6 +55,11 @@
     _backgroundMaskView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.topHeight-scrollView.contentOffset.y);
 }
 
+- (void) parallaxScrollViewController:(QMBParallaxScrollViewController *) controller didChangeTopHeight:(CGFloat) height
+{
+    _backgroundMaskView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), height);
+}
+
 #pragma mark - Basic UI
 
 - (BOOL)prefersStatusBarHidden
