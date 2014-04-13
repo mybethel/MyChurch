@@ -17,12 +17,47 @@
                     <size key="freeformSize" width="320" height="200"/>
                     <connections>
                         <outlet property="mapView" destination="I5C-Io-xma" id="LDs-AS-rUn"/>
-                        <segue destination="bVv-u0-BKt" kind="push" identifier="ChurchDetail" id="QqY-9u-I13"/>
+                        <segue destination="HlU-g3-dxg" kind="push" identifier="ChurchDetail" id="6zo-3v-ep8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPT-ht-HpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23" y="-442"/>
+        </scene>
+        <!--Church Detail View Controller-->
+        <scene sceneID="Yfk-Bw-FbD">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="HlU-g3-dxg" customClass="ChurchDetailViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="PWW-SD-lDM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UTt-cd-f8D">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CELL_ID" id="TLB-y6-GaM">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="HlU-g3-dxg" id="ZLy-QM-sdi"/>
+                            <outlet property="delegate" destination="HlU-g3-dxg" id="fSQ-2k-qLk"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="UBs-DQ-Yvm"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lww-Fy-TJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="39"/>
         </scene>
         <!--Location Aware Splash-->
         <scene sceneID="11R-10-ojC">
@@ -147,14 +182,14 @@
                     </tableView>
                     <connections>
                         <outlet property="view" destination="70t-4V-URK" id="Cls-3q-PKe"/>
-                        <segue destination="bVv-u0-BKt" kind="push" identifier="ChurchDetail" id="8g0-vK-2IS"/>
+                        <segue destination="HlU-g3-dxg" kind="push" identifier="ChurchDetail" id="tz2-91-eBF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwl-Wt-Kqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23" y="533"/>
         </scene>
-        <!--Main View Controller - Bethel-->
+        <!--Main View Controller-->
         <scene sceneID="vzL-fC-WKK">
             <objects>
                 <viewController id="Qvv-zy-7Uh" customClass="MainViewController" sceneMemberID="viewController">
@@ -167,36 +202,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bethel" id="131-lj-mq8">
-                        <barButtonItem key="rightBarButtonItem" title="Debug" id="BWG-pk-2xA">
-                            <connections>
-                                <segue destination="lGy-Gh-wME" kind="custom" customClass="DATBlurSegue" id="3Tt-IP-ISo"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="131-lj-mq8"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Oc-a1-zPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23" y="-145"/>
-        </scene>
-        <!--Church Detail View Controller-->
-        <scene sceneID="UqT-CL-kkt">
-            <objects>
-                <viewController id="bVv-u0-BKt" customClass="ChurchDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="maK-ok-6oL"/>
-                        <viewControllerLayoutGuide type="bottom" id="2qN-a0-hTi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3UO-20-Lnh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pni-Pv-SBJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aKw-bq-8Vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="475" y="-145"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="Qsc-Pb-yBl">
@@ -218,95 +229,8 @@
             </objects>
             <point key="canvasLocation" x="-464" y="-145"/>
         </scene>
-        <!--Church Gallery View Controller-->
-        <scene sceneID="kdd-V5-EWl">
-            <objects>
-                <viewController storyboardIdentifier="ChurchGalleryView" automaticallyAdjustsScrollViewInsets="NO" id="c6U-iV-gvS" customClass="ChurchGalleryViewController" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TemporaryImage.jpg" id="ZJ5-MF-yri">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </imageView>
-                    <toolbarItems/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="200"/>
-                    <connections>
-                        <outlet property="imageView" destination="ZJ5-MF-yri" id="j6F-4r-yP4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mz1-wN-Fb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="475" y="-442"/>
-        </scene>
-        <!--Church Main View Controller-->
-        <scene sceneID="YED-2K-ZTH">
-            <objects>
-                <viewController storyboardIdentifier="ChurchMainView" automaticallyAdjustsScrollViewInsets="NO" id="Ytu-v9-c9M" customClass="ChurchMainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EmW-Jm-VQM"/>
-                        <viewControllerLayoutGuide type="bottom" id="ctN-Lf-qLI"/>
-                    </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" id="ZeW-JM-eLL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYi-IB-dLM">
-                                <rect key="frame" x="0.0" y="50" width="320" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.76862752437591553" green="0.78039222955703735" blue="0.80000007152557373" alpha="1" colorSpace="deviceRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UxU-UG-cvt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94117653369903564" green="0.94509810209274292" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubR-Oq-9z0">
-                                <rect key="frame" x="0.0" y="50" width="320" height="283"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="7VM-GN-mQK"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Ytu-v9-c9M" id="9mD-Gk-5Up"/>
-                                </connections>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.97647064924240112" green="0.97647064924240112" blue="0.97647064924240112" alpha="1" colorSpace="deviceRGB"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                <size key="value" width="320" height="700"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </scrollView>
-                    <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="400"/>
-                    <connections>
-                        <outlet property="churchDescription" destination="ubR-Oq-9z0" id="FyQ-iQ-mp8"/>
-                        <outlet property="navigationToolbar" destination="UxU-UG-cvt" id="jw8-iY-5kM"/>
-                        <outlet property="scrollView" destination="ZeW-JM-eLL" id="UVm-fn-UPc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dJc-Vo-fdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="475" y="161"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="TemporaryImage.jpg" width="1024" height="765"/>
         <image name="TemporaryTableCell.png" width="319" height="96"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.57647061347961426" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
@@ -316,6 +240,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QqY-9u-I13"/>
+        <segue reference="tz2-91-eBF"/>
     </inferredMetricsTieBreakers>
 </document>

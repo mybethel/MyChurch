@@ -1,6 +1,4 @@
 platform :ios, '7.0'
 pod 'AFNetworking', '~> 2.0'
 pod 'SDWebImage', '~> 3.6'
-pod 'SVSegmentedControl', '~> 0.2'
-pod 'QMBParallaxScrollViewController', '~> 0.1'
 pod 'Shimmer', '~> 1.0'

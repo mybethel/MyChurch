@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Albert Martin. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "MapViewController.h"
@@ -17,46 +18,49 @@
 {
     [super viewDidLoad];
     
-    // Replacing the title with a custom view to allow the "Back" button to be a simple chevron.
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    titleLabel.text = @"Bethel";
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.font = [UIFont boldSystemFontOfSize:17];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    
-    [titleLabel sizeToFit];
-    
-    self.navigationItem.titleView = titleLabel;
-    
-    // Set the color of all newly created navbars.
-    [[UINavigationBar appearance] setBarTintColor:self.interfaceColor];
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UINavigationBar appearance] setAlpha:0.7];
-    
-    // Set the color of the current navbar, displaying immediate change.
-    self.navigationController.navigationBar.barTintColor = self.interfaceColor;
+    // Set up the navigation controller to be transparent.
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.translucent = TRUE;
+    self.navigationController.navigationBarHidden = TRUE;
     
+    [self setupParallaxScroller];
+}
+
+- (void)setupParallaxScroller
+{
     MapViewController *mapView = [self.storyboard instantiateViewControllerWithIdentifier:@"MapView"];
     mapView.controller = self;
     ResultsViewController *resultsView = [self.storyboard instantiateViewControllerWithIdentifier:@"ResultsView"];
     resultsView.controller = self;
+    
+    _locations = [[NSMutableArray alloc] init];
     self.locationsTableView = resultsView.tableView;
     self.delegate = self;
     
-    _locations = [[NSMutableArray alloc] init];
-    
     [self setupWithTopViewController:mapView andTopHeight:240 andBottomViewController:resultsView];
+    self.maxHeight = self.view.frame.size.height;
+    
+    _backgroundMaskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.topViewController.view.bounds))];
+    _backgroundMaskView.backgroundColor = [UIColor blackColor];
+    [self.view insertSubview:_backgroundMaskView belowSubview:self.topViewController.view];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+#pragma mark - QMBParallaxScrollView delegate functions
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    self.navigationController.navigationBar.barTintColor = self.interfaceColor;
+    [super scrollViewDidScroll:scrollView];
+    _backgroundMaskView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.topHeight-scrollView.contentOffset.y);
 }
 
 #pragma mark - Basic UI
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 
 - (UIColor *)interfaceColor
 {

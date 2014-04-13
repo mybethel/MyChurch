@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Albert Martin. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "AFNetworking/AFNetworking.h"
 #import "AppDelegate.h"
 #import "MapViewController.h"
@@ -27,6 +28,26 @@
     UIPanGestureRecognizer* panRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(updateMapPins:)];
     [panRec setDelegate:self];
     [self.mapView addGestureRecognizer:panRec];
+    
+    // Gradient to top image
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = CGRectMake(0, 0, CGRectGetWidth(_mapView.bounds), 40);
+    gradient.colors = @[(id)[[UIColor colorWithWhite:0.0 alpha:0.3] CGColor],
+                        (id)[[UIColor colorWithWhite:0.0 alpha:0] CGColor]];
+    [_mapView.layer insertSublayer:gradient atIndex:1];
+    
+    // Content perfect pixel
+    UIView *perfectPixelContent = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_mapView.bounds), 1)];
+    perfectPixelContent.backgroundColor = [UIColor colorWithWhite:1 alpha:0.4];
+    [self.view addSubview:perfectPixelContent];
+    
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:_mapView.bounds byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight) cornerRadii:CGSizeMake(4.0, 4.0)];
+    
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame = _mapView.bounds;
+    maskLayer.path = maskPath.CGPath;
+    _mapView.layer.mask = maskLayer;
+    _mapView.layer.masksToBounds = TRUE;
     
     firstLaunch = TRUE;
 }

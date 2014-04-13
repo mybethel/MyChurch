@@ -16,5 +16,6 @@
 @property (nonatomic, retain) NSMutableArray *locations;
 @property (nonatomic, retain) UIColor *interfaceColor;
 @property (nonatomic, retain) UITableView *locationsTableView;
+@property (nonatomic, retain) UIView *backgroundMaskView;
 
 @end

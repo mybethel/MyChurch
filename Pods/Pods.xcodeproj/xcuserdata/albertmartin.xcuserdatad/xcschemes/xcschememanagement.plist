@@ -9,17 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-QMBParallaxScrollViewController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-SDWebImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SVSegmentedControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2FBC3DABFCBB4C95B30D288F</key>
+		<key>233828949BE849458345E2A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>529A8A842DB34EB2B57023DC</key>
+		<key>877886D0F80F4B4DB78844C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74C1B0A819CB426CB01BDC0B</key>
+		<key>E1869D8C484D47009C907E68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B15630FA88A2444BA8A3BCFB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B25FB90DBB9249D9B99405ED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD84BAA441AF425B97CB3D72</key>
+		<key>F8CFDB7B624942A398A49A52</key>
 		<dict>
 			<key>primary</key>
 			<true/>

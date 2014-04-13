@@ -47,7 +47,7 @@
             NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
             
             // The API has returned a location within 100 meters, the user is here!
-            if ([locations objectForKey:@"locations"][0]) {
+            if (![[locations objectForKey:@"locations"] count] && [locations objectForKey:@"locations"][0]) {
                 NSDictionary *location = [locations objectForKey:@"locations"][0][@"obj"];
                 NSDictionary *ministry = [locations objectForKey:@"ministries"][location[@"obj"][@"ministry"]];
                 

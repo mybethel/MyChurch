@@ -19,6 +19,11 @@
     // Set up the table view defaults
     self.tableView.backgroundView = nil;
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1.0];
+    
+    // Content perfect pixel
+    UIView *pixel = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 1)];
+    pixel.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+    [self.view addSubview:pixel];
 }
 
 - (UIScrollView *)scrollViewForParallexController
@@ -59,8 +64,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"ChurchDetail"]) {
-        AppDelegate *app = [[UIApplication sharedApplication] delegate];
-        app.activeLocation = [_controller.locations objectAtIndex: [self.tableView indexPathForSelectedRow].row];
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] setActiveLocation: [_controller.locations objectAtIndex: [self.tableView indexPathForSelectedRow].row]];
         [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     }
 }

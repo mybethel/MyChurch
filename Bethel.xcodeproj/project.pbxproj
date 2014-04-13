@@ -8,19 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		07AC6902F7434D9CB445AD52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9A47A5DDEE4E78A6DB3F71 /* libPods.a */; };
-		860F9A5018ECF346007AB29C /* ChurchMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A4F18ECF346007AB29C /* ChurchMainViewController.m */; };
 		860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5218F07E08007AB29C /* LocationTableCell.m */; };
 		860F9A5918F0A267007AB29C /* TemporaryTableCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5818F0A267007AB29C /* TemporaryTableCell@2x.png */; };
 		860F9A5B18F0A276007AB29C /* Placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5A18F0A276007AB29C /* Placeholder@2x.png */; };
 		860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */; };
 		860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */; };
-		860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A6218F1FF38007AB29C /* ChurchGalleryViewController.m */; };
 		860F9A6718F23953007AB29C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860F9A6618F23953007AB29C /* CoreText.framework */; };
 		860F9A7518F23CEB007AB29C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860F9A7418F23CEB007AB29C /* QuartzCore.framework */; };
-		860F9A7E18F24033007AB29C /* MarkdownTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7818F24033007AB29C /* MarkdownTokenizer.m */; };
-		860F9A7F18F24033007AB29C /* MarkdownTokens.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7A18F24033007AB29C /* MarkdownTokens.m */; };
-		860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */; };
-		860F9A8318F240C2007AB29C /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8118F240C2007AB29C /* fmemopen.c */; };
 		860F9A8618F4C447007AB29C /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8518F4C447007AB29C /* MainNavigationController.m */; };
 		860F9A8918F4D762007AB29C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8818F4D762007AB29C /* MainViewController.m */; };
 		860F9A8C18F4D80A007AB29C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8B18F4D80A007AB29C /* MapViewController.m */; };
@@ -28,6 +22,8 @@
 		860F9AAC18F4F102007AB29C /* DATBlurSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AA918F4F102007AB29C /* DATBlurSegue.m */; };
 		860F9AAD18F4F102007AB29C /* DATBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AAB18F4F102007AB29C /* DATBlurView.m */; };
 		860F9AB018F4F444007AB29C /* LocationAwareSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */; };
+		860F9AB918F9EFA5007AB29C /* QMBParallaxScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AB618F9EFA5007AB29C /* QMBParallaxScrollViewController.m */; };
+		860F9ABA18F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AB818F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m */; };
 		863ED8631839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
 		863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8641839A22000AB7A6A /* CoreGraphics.framework */; };
 		863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8661839A22000AB7A6A /* UIKit.framework */; };
@@ -35,7 +31,6 @@
 		863ED86F1839A22000AB7A6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED86E1839A22000AB7A6A /* main.m */; };
 		863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED8721839A22000AB7A6A /* AppDelegate.m */; };
 		863ED8761839A22000AB7A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863ED8741839A22000AB7A6A /* Main.storyboard */; };
-		863ED87C1839A22000AB7A6A /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED87B1839A22000AB7A6A /* FlipsideViewController.m */; };
 		863ED87E1839A22000AB7A6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863ED87D1839A22000AB7A6A /* Images.xcassets */; };
 		863ED8851839A22000AB7A6A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8841839A22000AB7A6A /* XCTest.framework */; };
 		863ED8861839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
@@ -44,6 +39,15 @@
 		863ED8911839A22000AB7A6A /* BethelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED8901839A22000AB7A6A /* BethelTests.m */; };
 		863ED89B1839A2AE00AB7A6A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED89A1839A2AE00AB7A6A /* MapKit.framework */; };
 		863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 863ED89D1839A9D900AB7A6A /* ChurchLocation.m */; };
+		866E82BE18FA033800E5D594 /* HACollectionViewLargeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E82B518FA033800E5D594 /* HACollectionViewLargeLayout.m */; };
+		866E82BF18FA033800E5D594 /* HACollectionViewSmallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E82B718FA033800E5D594 /* HACollectionViewSmallLayout.m */; };
+		866E82C018FA033800E5D594 /* HAPaperCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E82B918FA033800E5D594 /* HAPaperCollectionViewController.m */; };
+		866E82C118FA033800E5D594 /* HATransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E82BB18FA033800E5D594 /* HATransitionController.m */; };
+		866E82C218FA033800E5D594 /* HATransitionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E82BD18FA033800E5D594 /* HATransitionLayout.m */; };
+		866E82CB18FA1C3B00E5D594 /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = 866E82C318FA1C3B00E5D594 /* fmemopen.c */; };
+		866E82CC18FA1C3B00E5D594 /* MarkdownTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E82C518FA1C3B00E5D594 /* MarkdownTokenizer.m */; };
+		866E82CD18FA1C3B00E5D594 /* MarkdownTokens.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E82C718FA1C3B00E5D594 /* MarkdownTokens.m */; };
+		866E82CE18FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E82CA18FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +62,6 @@
 
 /* Begin PBXFileReference section */
 		26D6E6B4896D4131BCF9CA97 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		860F9A4E18ECF346007AB29C /* ChurchMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchMainViewController.h; sourceTree = "<group>"; };
-		860F9A4F18ECF346007AB29C /* ChurchMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchMainViewController.m; sourceTree = "<group>"; };
 		860F9A5118F07E08007AB29C /* LocationTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableCell.h; sourceTree = "<group>"; };
 		860F9A5218F07E08007AB29C /* LocationTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableCell.m; sourceTree = "<group>"; };
 		860F9A5818F0A267007AB29C /* TemporaryTableCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TemporaryTableCell@2x.png"; path = "Resources/TemporaryTableCell@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -67,18 +69,8 @@
 		860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TemporaryImage.jpg; path = Resources/TemporaryImage.jpg; sourceTree = SOURCE_ROOT; };
 		860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchDetailViewController.h; sourceTree = "<group>"; };
 		860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchDetailViewController.m; sourceTree = "<group>"; };
-		860F9A6118F1FF38007AB29C /* ChurchGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchGalleryViewController.h; sourceTree = "<group>"; };
-		860F9A6218F1FF38007AB29C /* ChurchGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchGalleryViewController.m; sourceTree = "<group>"; };
 		860F9A6618F23953007AB29C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		860F9A7418F23CEB007AB29C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		860F9A7818F24033007AB29C /* MarkdownTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkdownTokenizer.m; sourceTree = "<group>"; };
-		860F9A7918F24033007AB29C /* MarkdownTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkdownTokens.h; sourceTree = "<group>"; };
-		860F9A7A18F24033007AB29C /* MarkdownTokens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkdownTokens.m; sourceTree = "<group>"; };
-		860F9A7B18F24033007AB29C /* NimbusMarkdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NimbusMarkdown.h; sourceTree = "<group>"; };
-		860F9A7C18F24033007AB29C /* NSAttributedStringMarkdownParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringMarkdownParser.h; sourceTree = "<group>"; };
-		860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedStringMarkdownParser.m; sourceTree = "<group>"; };
-		860F9A8118F240C2007AB29C /* fmemopen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fmemopen.c; sourceTree = "<group>"; };
-		860F9A8218F240C2007AB29C /* fmemopen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fmemopen.h; sourceTree = "<group>"; };
 		860F9A8418F4C447007AB29C /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		860F9A8518F4C447007AB29C /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		860F9A8718F4D762007AB29C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -93,6 +85,10 @@
 		860F9AAB18F4F102007AB29C /* DATBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATBlurView.m; sourceTree = "<group>"; };
 		860F9AAE18F4F444007AB29C /* LocationAwareSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAwareSplash.h; sourceTree = "<group>"; };
 		860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAwareSplash.m; sourceTree = "<group>"; };
+		860F9AB518F9EFA5007AB29C /* QMBParallaxScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMBParallaxScrollViewController.h; sourceTree = "<group>"; };
+		860F9AB618F9EFA5007AB29C /* QMBParallaxScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMBParallaxScrollViewController.m; sourceTree = "<group>"; };
+		860F9AB718F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QMBParallaxScrollViewController.h"; sourceTree = "<group>"; };
+		860F9AB818F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QMBParallaxScrollViewController.m"; sourceTree = "<group>"; };
 		863ED85F1839A22000AB7A6A /* Bethel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bethel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8621839A22000AB7A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863ED8641839A22000AB7A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,8 +100,6 @@
 		863ED8711839A22000AB7A6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		863ED8721839A22000AB7A6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		863ED8751839A22000AB7A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		863ED87A1839A22000AB7A6A /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
-		863ED87B1839A22000AB7A6A /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		863ED87D1839A22000AB7A6A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		863ED8831839A22000AB7A6A /* BethelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BethelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8841839A22000AB7A6A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -115,6 +109,24 @@
 		863ED89A1839A2AE00AB7A6A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		863ED89C1839A9D900AB7A6A /* ChurchLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchLocation.h; sourceTree = "<group>"; };
 		863ED89D1839A9D900AB7A6A /* ChurchLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchLocation.m; sourceTree = "<group>"; };
+		866E82B418FA033800E5D594 /* HACollectionViewLargeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HACollectionViewLargeLayout.h; path = Libraries/HAPaperView/HACollectionViewLargeLayout.h; sourceTree = SOURCE_ROOT; };
+		866E82B518FA033800E5D594 /* HACollectionViewLargeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HACollectionViewLargeLayout.m; path = Libraries/HAPaperView/HACollectionViewLargeLayout.m; sourceTree = SOURCE_ROOT; };
+		866E82B618FA033800E5D594 /* HACollectionViewSmallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HACollectionViewSmallLayout.h; path = Libraries/HAPaperView/HACollectionViewSmallLayout.h; sourceTree = SOURCE_ROOT; };
+		866E82B718FA033800E5D594 /* HACollectionViewSmallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HACollectionViewSmallLayout.m; path = Libraries/HAPaperView/HACollectionViewSmallLayout.m; sourceTree = SOURCE_ROOT; };
+		866E82B818FA033800E5D594 /* HAPaperCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HAPaperCollectionViewController.h; path = Libraries/HAPaperView/HAPaperCollectionViewController.h; sourceTree = SOURCE_ROOT; };
+		866E82B918FA033800E5D594 /* HAPaperCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HAPaperCollectionViewController.m; path = Libraries/HAPaperView/HAPaperCollectionViewController.m; sourceTree = SOURCE_ROOT; };
+		866E82BA18FA033800E5D594 /* HATransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HATransitionController.h; path = Libraries/HAPaperView/HATransitionController.h; sourceTree = SOURCE_ROOT; };
+		866E82BB18FA033800E5D594 /* HATransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HATransitionController.m; path = Libraries/HAPaperView/HATransitionController.m; sourceTree = SOURCE_ROOT; };
+		866E82BC18FA033800E5D594 /* HATransitionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HATransitionLayout.h; path = Libraries/HAPaperView/HATransitionLayout.h; sourceTree = SOURCE_ROOT; };
+		866E82BD18FA033800E5D594 /* HATransitionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HATransitionLayout.m; path = Libraries/HAPaperView/HATransitionLayout.m; sourceTree = SOURCE_ROOT; };
+		866E82C318FA1C3B00E5D594 /* fmemopen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fmemopen.c; path = Libraries/Markdown/fmemopen.c; sourceTree = "<group>"; };
+		866E82C418FA1C3B00E5D594 /* fmemopen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmemopen.h; path = Libraries/Markdown/fmemopen.h; sourceTree = "<group>"; };
+		866E82C518FA1C3B00E5D594 /* MarkdownTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarkdownTokenizer.m; path = Libraries/Markdown/MarkdownTokenizer.m; sourceTree = "<group>"; };
+		866E82C618FA1C3B00E5D594 /* MarkdownTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarkdownTokens.h; path = Libraries/Markdown/MarkdownTokens.h; sourceTree = "<group>"; };
+		866E82C718FA1C3B00E5D594 /* MarkdownTokens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarkdownTokens.m; path = Libraries/Markdown/MarkdownTokens.m; sourceTree = "<group>"; };
+		866E82C818FA1C3B00E5D594 /* NimbusMarkdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NimbusMarkdown.h; path = Libraries/Markdown/NimbusMarkdown.h; sourceTree = "<group>"; };
+		866E82C918FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAttributedStringMarkdownParser.h; path = Libraries/Markdown/NSAttributedStringMarkdownParser.h; sourceTree = "<group>"; };
+		866E82CA18FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAttributedStringMarkdownParser.m; path = Libraries/Markdown/NSAttributedStringMarkdownParser.m; sourceTree = "<group>"; };
 		8E9A47A5DDEE4E78A6DB3F71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,14 +161,14 @@
 		860F9A7718F24023007AB29C /* Markdown */ = {
 			isa = PBXGroup;
 			children = (
-				860F9A7818F24033007AB29C /* MarkdownTokenizer.m */,
-				860F9A7918F24033007AB29C /* MarkdownTokens.h */,
-				860F9A7A18F24033007AB29C /* MarkdownTokens.m */,
-				860F9A7B18F24033007AB29C /* NimbusMarkdown.h */,
-				860F9A7C18F24033007AB29C /* NSAttributedStringMarkdownParser.h */,
-				860F9A7D18F24033007AB29C /* NSAttributedStringMarkdownParser.m */,
-				860F9A8118F240C2007AB29C /* fmemopen.c */,
-				860F9A8218F240C2007AB29C /* fmemopen.h */,
+				866E82C518FA1C3B00E5D594 /* MarkdownTokenizer.m */,
+				866E82C618FA1C3B00E5D594 /* MarkdownTokens.h */,
+				866E82C718FA1C3B00E5D594 /* MarkdownTokens.m */,
+				866E82C818FA1C3B00E5D594 /* NimbusMarkdown.h */,
+				866E82C918FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.h */,
+				866E82CA18FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.m */,
+				866E82C318FA1C3B00E5D594 /* fmemopen.c */,
+				866E82C418FA1C3B00E5D594 /* fmemopen.h */,
 			);
 			name = Markdown;
 			sourceTree = "<group>";
@@ -172,6 +184,18 @@
 			name = DATBlurSegue;
 			path = Dependencies/DATBlurSegue;
 			sourceTree = "<group>";
+		};
+		860F9AB418F9EFA5007AB29C /* QMBParallaxScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				860F9AB518F9EFA5007AB29C /* QMBParallaxScrollViewController.h */,
+				860F9AB618F9EFA5007AB29C /* QMBParallaxScrollViewController.m */,
+				860F9AB718F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.h */,
+				860F9AB818F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m */,
+			);
+			name = QMBParallaxScrollViewController;
+			path = Libraries/QMBParallaxScrollViewController;
+			sourceTree = SOURCE_ROOT;
 		};
 		863ED8561839A22000AB7A6A = {
 			isa = PBXGroup;
@@ -225,18 +249,12 @@
 				860F9A8518F4C447007AB29C /* MainNavigationController.m */,
 				860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */,
 				860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */,
-				860F9A4E18ECF346007AB29C /* ChurchMainViewController.h */,
-				860F9A4F18ECF346007AB29C /* ChurchMainViewController.m */,
-				860F9A6118F1FF38007AB29C /* ChurchGalleryViewController.h */,
-				860F9A6218F1FF38007AB29C /* ChurchGalleryViewController.m */,
 				863ED89C1839A9D900AB7A6A /* ChurchLocation.h */,
 				863ED89D1839A9D900AB7A6A /* ChurchLocation.m */,
 				860F9A5118F07E08007AB29C /* LocationTableCell.h */,
 				860F9A5218F07E08007AB29C /* LocationTableCell.m */,
 				860F9AAE18F4F444007AB29C /* LocationAwareSplash.h */,
 				860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */,
-				863ED87A1839A22000AB7A6A /* FlipsideViewController.h */,
-				863ED87B1839A22000AB7A6A /* FlipsideViewController.m */,
 				863ED87D1839A22000AB7A6A /* Images.xcassets */,
 				860F9A5818F0A267007AB29C /* TemporaryTableCell@2x.png */,
 				860F9A5A18F0A276007AB29C /* Placeholder@2x.png */,
@@ -249,6 +267,8 @@
 		863ED8691839A22000AB7A6A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				866E82B318FA020900E5D594 /* HAPaperView */,
+				860F9AB418F9EFA5007AB29C /* QMBParallaxScrollViewController */,
 				860F9A9418F4F0DE007AB29C /* DATBlurSegue */,
 				863ED86A1839A22000AB7A6A /* Bethel-Info.plist */,
 				863ED86B1839A22000AB7A6A /* InfoPlist.strings */,
@@ -274,6 +294,23 @@
 				863ED88D1839A22000AB7A6A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		866E82B318FA020900E5D594 /* HAPaperView */ = {
+			isa = PBXGroup;
+			children = (
+				866E82B418FA033800E5D594 /* HACollectionViewLargeLayout.h */,
+				866E82B518FA033800E5D594 /* HACollectionViewLargeLayout.m */,
+				866E82B618FA033800E5D594 /* HACollectionViewSmallLayout.h */,
+				866E82B718FA033800E5D594 /* HACollectionViewSmallLayout.m */,
+				866E82B818FA033800E5D594 /* HAPaperCollectionViewController.h */,
+				866E82B918FA033800E5D594 /* HAPaperCollectionViewController.m */,
+				866E82BA18FA033800E5D594 /* HATransitionController.h */,
+				866E82BB18FA033800E5D594 /* HATransitionController.m */,
+				866E82BC18FA033800E5D594 /* HATransitionLayout.h */,
+				866E82BD18FA033800E5D594 /* HATransitionLayout.m */,
+			);
+			name = HAPaperView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,22 +450,26 @@
 			files = (
 				860F9A8F18F4D867007AB29C /* ResultsViewController.m in Sources */,
 				863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */,
+				866E82CB18FA1C3B00E5D594 /* fmemopen.c in Sources */,
 				860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */,
-				860F9A6318F1FF38007AB29C /* ChurchGalleryViewController.m in Sources */,
+				860F9ABA18F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m in Sources */,
+				866E82C018FA033800E5D594 /* HAPaperCollectionViewController.m in Sources */,
 				860F9AB018F4F444007AB29C /* LocationAwareSplash.m in Sources */,
-				860F9A8318F240C2007AB29C /* fmemopen.c in Sources */,
+				866E82C218FA033800E5D594 /* HATransitionLayout.m in Sources */,
+				866E82BF18FA033800E5D594 /* HACollectionViewSmallLayout.m in Sources */,
 				860F9A8618F4C447007AB29C /* MainNavigationController.m in Sources */,
 				863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */,
-				860F9A7F18F24033007AB29C /* MarkdownTokens.m in Sources */,
-				860F9A8018F24033007AB29C /* NSAttributedStringMarkdownParser.m in Sources */,
+				866E82CD18FA1C3B00E5D594 /* MarkdownTokens.m in Sources */,
+				866E82C118FA033800E5D594 /* HATransitionController.m in Sources */,
+				860F9AB918F9EFA5007AB29C /* QMBParallaxScrollViewController.m in Sources */,
+				866E82CE18FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.m in Sources */,
+				866E82CC18FA1C3B00E5D594 /* MarkdownTokenizer.m in Sources */,
 				860F9A8918F4D762007AB29C /* MainViewController.m in Sources */,
 				860F9AAC18F4F102007AB29C /* DATBlurSegue.m in Sources */,
-				860F9A5018ECF346007AB29C /* ChurchMainViewController.m in Sources */,
 				860F9A8C18F4D80A007AB29C /* MapViewController.m in Sources */,
 				860F9AAD18F4F102007AB29C /* DATBlurView.m in Sources */,
-				863ED87C1839A22000AB7A6A /* FlipsideViewController.m in Sources */,
 				860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */,
-				860F9A7E18F24033007AB29C /* MarkdownTokenizer.m in Sources */,
+				866E82BE18FA033800E5D594 /* HACollectionViewLargeLayout.m in Sources */,
 				863ED86F1839A22000AB7A6A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
