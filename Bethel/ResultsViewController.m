@@ -58,10 +58,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == [_controller.locations count]-1) {
-        return 99;
-    } else {
-        return 89;
+        return 99+36;
     }
+    
+    return 89;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
