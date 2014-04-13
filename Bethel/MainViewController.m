@@ -30,6 +30,16 @@
     [self setupParallaxScroller];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    UIWindow *locationAlertWindow = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow];
+    if ([(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation]) {
+        [(LocationAwareAlert *)locationAlertWindow.rootViewController showLocationAlert];
+    }
+}
+
 - (void)setupParallaxScroller
 {
     MapViewController *mapView = [self.storyboard instantiateViewControllerWithIdentifier:@"MapView"];

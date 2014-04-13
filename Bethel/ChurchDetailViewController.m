@@ -102,6 +102,13 @@
 {
     [super viewDidAppear:animated];
     [self.view bringSubviewToFront:_topView];
+    
+    UIWindow *locationAlertWindow = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow];
+    if ([(LocationAwareAlert *)locationAlertWindow.rootViewController isLocationAlertVisible] && [[(AppDelegate *)[[UIApplication sharedApplication] delegate] activeLocation].uuid isEqualToString: [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].uuid]) {
+        [(LocationAwareAlert *)locationAlertWindow.rootViewController hideLocationAlert];
+    } else {
+        [(LocationAwareAlert *)locationAlertWindow.rootViewController showLocationAlert];
+    }
 }
 
 - (void)backButtonPressed
