@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07AC6902F7434D9CB445AD52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9A47A5DDEE4E78A6DB3F71 /* libPods.a */; };
+		8600873C18FAB00100E02CE4 /* LocationAwareAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */; };
 		860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5218F07E08007AB29C /* LocationTableCell.m */; };
 		860F9A5B18F0A276007AB29C /* Placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5A18F0A276007AB29C /* Placeholder@2x.png */; };
 		860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */; };
@@ -61,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		26D6E6B4896D4131BCF9CA97 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		8600873A18FAB00100E02CE4 /* LocationAwareAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAwareAlert.h; sourceTree = "<group>"; };
+		8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAwareAlert.m; sourceTree = "<group>"; };
 		860F9A5118F07E08007AB29C /* LocationTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableCell.h; sourceTree = "<group>"; };
 		860F9A5218F07E08007AB29C /* LocationTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableCell.m; sourceTree = "<group>"; };
 		860F9A5A18F0A276007AB29C /* Placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Placeholder@2x.png"; path = "Resources/Placeholder@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -251,6 +254,8 @@
 				863ED89D1839A9D900AB7A6A /* ChurchLocation.m */,
 				860F9A5118F07E08007AB29C /* LocationTableCell.h */,
 				860F9A5218F07E08007AB29C /* LocationTableCell.m */,
+				8600873A18FAB00100E02CE4 /* LocationAwareAlert.h */,
+				8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */,
 				860F9AAE18F4F444007AB29C /* LocationAwareSplash.h */,
 				860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */,
 				863ED87D1839A22000AB7A6A /* Images.xcassets */,
@@ -444,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8600873C18FAB00100E02CE4 /* LocationAwareAlert.m in Sources */,
 				860F9A8F18F4D867007AB29C /* ResultsViewController.m in Sources */,
 				863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */,
 				866E82CB18FA1C3B00E5D594 /* fmemopen.c in Sources */,

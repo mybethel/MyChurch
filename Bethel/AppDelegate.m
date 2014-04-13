@@ -26,6 +26,14 @@
     _locationManager.delegate = self;
     [_locationManager startUpdatingLocation];
     
+    _locationAlertWindow = [[UIWindow alloc] initWithFrame:self.window.bounds];
+    _locationAlertWindow.rootViewController = [[LocationAwareAlert alloc] init];
+    _locationAlertWindow.clipsToBounds = YES;
+    _locationAlertWindow.windowLevel = UIWindowLevelAlert + 1;
+    
+    [_locationAlertWindow makeKeyAndVisible];
+    _locationAlertWindow.frame = CGRectMake(0, self.window.bounds.size.height, 320, 36);
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -47,9 +55,9 @@
             NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
             
             // The API has returned a location within 100 meters, the user is here!
-            if (![[locations objectForKey:@"locations"] count] && [locations objectForKey:@"locations"][0]) {
+            if ([[locations objectForKey:@"locations"] count] > 0 && [locations objectForKey:@"locations"][0]) {
                 NSDictionary *location = [locations objectForKey:@"locations"][0][@"obj"];
-                NSDictionary *ministry = [locations objectForKey:@"ministries"][location[@"obj"][@"ministry"]];
+                NSDictionary *ministry = [locations objectForKey:@"ministries"][location[@"ministry"]];
                 
                 CLLocationCoordinate2D coordinate;
                 coordinate.latitude = [location[@"loc"][1] doubleValue];
@@ -57,6 +65,22 @@
                 
                 // Populate the ChurchLocation object to use in the splash dialogue.
                 _liveLocation = [[ChurchLocation alloc] initWithLocation:location ministry:ministry coordinate:coordinate];
+                
+                [(LocationAwareAlert *)_locationAlertWindow.rootViewController setupLocationAlert];
+                
+                CGRect frame = _locationAlertWindow.frame;
+                frame.origin.y = self.window.frame.size.height-36;
+                
+                [UIWindow animateWithDuration:0.3 animations:^{
+                    _locationAlertWindow.frame = frame;
+                }];
+            } else {
+                CGRect frame = _locationAlertWindow.frame;
+                frame.origin.y = self.window.frame.size.height;
+                
+                [UIWindow animateWithDuration:0.3 animations:^{
+                    _locationAlertWindow.frame = frame;
+                }];
             }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
