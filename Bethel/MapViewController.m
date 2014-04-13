@@ -32,9 +32,14 @@
     // Gradient to top image
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = CGRectMake(0, 0, CGRectGetWidth(_mapView.bounds), 40);
-    gradient.colors = @[(id)[[UIColor colorWithWhite:0.0 alpha:0.3] CGColor],
+    gradient.colors = @[(id)[[UIColor colorWithWhite:0.0 alpha:0.4] CGColor],
                         (id)[[UIColor colorWithWhite:0.0 alpha:0] CGColor]];
-    [_mapView.layer insertSublayer:gradient atIndex:1];
+    [_mapView.layer addSublayer:gradient];
+    
+    CALayer *logo = [CALayer layer];
+    logo.frame = CGRectMake((self.view.bounds.size.width/2)-(97/2), 10, 97, 20);
+    logo.contents = (id)[UIImage imageNamed:@"Logo"].CGImage;
+    [self.view.layer addSublayer:logo];
     
     // Content perfect pixel
     UIView *perfectPixelContent = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_mapView.bounds), 1)];
