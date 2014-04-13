@@ -49,6 +49,8 @@
     [UIWindow animateWithDuration:0.3 animations:^{
         [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = alertFrame;
     }];
+    
+    _isLocationAlertVisible = TRUE;
 }
 
 - (void)hideLocationAlert
@@ -59,6 +61,8 @@
     [UIWindow animateWithDuration:0.3 animations:^{
         [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = alertFrame;
     }];
+    
+    _isLocationAlertVisible = FALSE;
 }
 
 - (void)handleTapGesture:(id)sender

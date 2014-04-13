@@ -12,6 +12,7 @@
 @interface LocationAwareAlert : UIViewController <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, retain) UILabel *welcomeTitleLabel;
+@property (nonatomic) BOOL isLocationAlertVisible;
 
 - (void)showLocationAlert;
 - (void)hideLocationAlert;
