@@ -9,11 +9,7 @@
 /* Begin PBXBuildFile section */
 		07AC6902F7434D9CB445AD52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9A47A5DDEE4E78A6DB3F71 /* libPods.a */; };
 		8600873C18FAB00100E02CE4 /* LocationAwareAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */; };
-		8600873F18FACD5100E02CE4 /* DisclosureClosed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8600873D18FACD5100E02CE4 /* DisclosureClosed@2x.png */; };
-		8600874018FACD5100E02CE4 /* DisclosureOpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8600873E18FACD5100E02CE4 /* DisclosureOpen@2x.png */; };
-		8600874218FADA6800E02CE4 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8600874118FADA6800E02CE4 /* Logo@2x.png */; };
 		860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5218F07E08007AB29C /* LocationTableCell.m */; };
-		860F9A5B18F0A276007AB29C /* Placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5A18F0A276007AB29C /* Placeholder@2x.png */; };
 		860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */; };
 		860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */; };
 		860F9A6718F23953007AB29C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860F9A6618F23953007AB29C /* CoreText.framework */; };
@@ -67,12 +63,8 @@
 		26D6E6B4896D4131BCF9CA97 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8600873A18FAB00100E02CE4 /* LocationAwareAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAwareAlert.h; sourceTree = "<group>"; };
 		8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAwareAlert.m; sourceTree = "<group>"; };
-		8600873D18FACD5100E02CE4 /* DisclosureClosed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DisclosureClosed@2x.png"; path = "Resources/DisclosureClosed@2x.png"; sourceTree = SOURCE_ROOT; };
-		8600873E18FACD5100E02CE4 /* DisclosureOpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DisclosureOpen@2x.png"; path = "Resources/DisclosureOpen@2x.png"; sourceTree = SOURCE_ROOT; };
-		8600874118FADA6800E02CE4 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo@2x.png"; path = "Resources/Logo@2x.png"; sourceTree = SOURCE_ROOT; };
 		860F9A5118F07E08007AB29C /* LocationTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableCell.h; sourceTree = "<group>"; };
 		860F9A5218F07E08007AB29C /* LocationTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableCell.m; sourceTree = "<group>"; };
-		860F9A5A18F0A276007AB29C /* Placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Placeholder@2x.png"; path = "Resources/Placeholder@2x.png"; sourceTree = SOURCE_ROOT; };
 		860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TemporaryImage.jpg; path = Resources/TemporaryImage.jpg; sourceTree = SOURCE_ROOT; };
 		860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchDetailViewController.h; sourceTree = "<group>"; };
 		860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchDetailViewController.m; sourceTree = "<group>"; };
@@ -265,11 +257,7 @@
 				860F9AAE18F4F444007AB29C /* LocationAwareSplash.h */,
 				860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */,
 				863ED87D1839A22000AB7A6A /* Images.xcassets */,
-				860F9A5A18F0A276007AB29C /* Placeholder@2x.png */,
 				860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */,
-				8600873D18FACD5100E02CE4 /* DisclosureClosed@2x.png */,
-				8600873E18FACD5100E02CE4 /* DisclosureOpen@2x.png */,
-				8600874118FADA6800E02CE4 /* Logo@2x.png */,
 				863ED8691839A22000AB7A6A /* Supporting Files */,
 			);
 			path = Bethel;
@@ -403,13 +391,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				863ED87E1839A22000AB7A6A /* Images.xcassets in Resources */,
-				8600874218FADA6800E02CE4 /* Logo@2x.png in Resources */,
-				860F9A5B18F0A276007AB29C /* Placeholder@2x.png in Resources */,
 				863ED86D1839A22000AB7A6A /* InfoPlist.strings in Resources */,
-				8600873F18FACD5100E02CE4 /* DisclosureClosed@2x.png in Resources */,
 				863ED8761839A22000AB7A6A /* Main.storyboard in Resources */,
 				860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */,
-				8600874018FACD5100E02CE4 /* DisclosureOpen@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
