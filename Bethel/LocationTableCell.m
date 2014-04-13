@@ -14,7 +14,7 @@
 {
     [super awakeFromNib];
     
-    UIView *frame = [[UIView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.bounds)-20, CGRectGetHeight(self.bounds)-20)];
+    UIView *frame = [[UIView alloc] initWithFrame:CGRectMake(10, 14, CGRectGetWidth(self.bounds)-20, CGRectGetHeight(self.bounds)-14)];
     frame.backgroundColor = [UIColor whiteColor];
     [self insertSubview:frame atIndex:0];
     [frame.layer setShadowOffset:CGSizeMake(0, 0)];

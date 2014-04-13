@@ -17,7 +17,6 @@
     [super viewDidLoad];
     
     // Set up the table view defaults
-    self.tableView.backgroundView = nil;
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1.0];
     
     // Content perfect pixel
@@ -58,7 +57,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 95;
+    return 89;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

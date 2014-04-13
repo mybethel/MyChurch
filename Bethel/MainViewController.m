@@ -25,6 +25,8 @@
     self.navigationController.navigationBar.translucent = TRUE;
     self.navigationController.navigationBarHidden = TRUE;
     
+    self.view.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1.0];
+    
     [self setupParallaxScroller];
 }
 
@@ -55,7 +57,7 @@
     _backgroundMaskView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.topHeight-scrollView.contentOffset.y);
 }
 
-- (void) parallaxScrollViewController:(QMBParallaxScrollViewController *) controller didChangeTopHeight:(CGFloat) height
+- (void)parallaxScrollViewController:(QMBParallaxScrollViewController *)controller didChangeTopHeight:(CGFloat)height
 {
     _backgroundMaskView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), height);
 }
