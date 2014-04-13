@@ -26,15 +26,14 @@
     _welcomeTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 290, 0)];
     _welcomeTitleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
     _welcomeTitleLabel.text = @"Welcome to Bethel";
-    _welcomeTitleLabel.backgroundColor = [UIColor clearColor];
     _welcomeTitleLabel.textColor = [UIColor whiteColor];
-    [_welcomeTitleLabel sizeToFit];
-    [_welcomeTitleLabel setClipsToBounds:NO];
-    [_welcomeTitleLabel.layer setShadowOffset:CGSizeMake(0, 0)];
-    [_welcomeTitleLabel.layer setShadowColor:[[UIColor blackColor] CGColor]];
-    [_welcomeTitleLabel.layer setShadowRadius:1.0];
-    [_welcomeTitleLabel.layer setShadowOpacity:0.6];
     _welcomeTitleView.contentView = _welcomeTitleLabel;
+    
+    CALayer *disclosure = [CALayer layer];
+    disclosure.frame = CGRectMake(self.view.bounds.size.width-30, 7, 23, 23);
+    disclosure.contents = (id)[UIImage imageNamed:@"DisclosureOpen"].CGImage;
+    disclosure.opacity = 0.7;
+    [self.view.layer addSublayer:disclosure];
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
