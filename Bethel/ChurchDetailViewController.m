@@ -65,7 +65,7 @@
     // Gradient to reflected image
     CAGradientLayer *gradientReflected = [CAGradientLayer layer];
     gradientReflected.frame = _reflected.bounds;
-    gradientReflected.colors = @[(id)[[UIColor colorWithWhite:0 alpha:1] CGColor],
+    gradientReflected.colors = @[(id)[[UIColor blackColor] CGColor],
                                  (id)[[UIColor colorWithWhite:0 alpha:0] CGColor]];
     [_reflected.layer insertSublayer:gradientReflected atIndex:0];
     
