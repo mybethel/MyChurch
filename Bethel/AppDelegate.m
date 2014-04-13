@@ -30,6 +30,7 @@
     _locationAlertWindow.rootViewController = [[LocationAwareAlert alloc] init];
     _locationAlertWindow.clipsToBounds = YES;
     _locationAlertWindow.windowLevel = UIWindowLevelAlert + 1;
+    _locationAlertWindow.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.9];
     
     [_locationAlertWindow makeKeyAndVisible];
     _locationAlertWindow.frame = CGRectMake(0, self.window.bounds.size.height, 320, 36);

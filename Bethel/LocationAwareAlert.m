@@ -15,11 +15,6 @@
 {
     [super viewWillAppear:animated];
     
-    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:self.view.bounds];
-    toolbar.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    toolbar.barStyle = UIBarStyleBlackOpaque;
-    [self.view addSubview:toolbar];
-    
     _welcomeTitleView = [[FBShimmeringView alloc] init];
     _welcomeTitleView.shimmering = YES;
     _welcomeTitleView.shimmeringBeginFadeDuration = 0.3;
