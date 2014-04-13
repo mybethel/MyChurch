@@ -10,4 +10,17 @@
 
 @implementation LocationTableCell
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    UIView *frame = [[UIView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.bounds)-20, CGRectGetHeight(self.bounds)-20)];
+    frame.backgroundColor = [UIColor whiteColor];
+    [self insertSubview:frame atIndex:0];
+    [frame.layer setShadowOffset:CGSizeMake(0, 0)];
+    [frame.layer setShadowColor:[[UIColor blackColor] CGColor]];
+    [frame.layer setShadowRadius:3.0];
+    [frame.layer setShadowOpacity:0.2];
+}
+
 @end
