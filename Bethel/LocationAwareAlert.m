@@ -43,21 +43,21 @@
 {
     _welcomeTitleLabel.text = [NSString stringWithFormat:@"Welcome to %@", [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].title];
     
-    CGRect frame = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame;
-    frame.origin.y = [[UIApplication sharedApplication] delegate].window.frame.size.height-36;
+    CGRect alertFrame = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame;
+    alertFrame.origin.y = [[UIApplication sharedApplication] delegate].window.frame.size.height-36;
     
     [UIWindow animateWithDuration:0.3 animations:^{
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = frame;
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = alertFrame;
     }];
 }
 
 - (void)hideLocationAlert
 {
-    CGRect frame = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame;
-    frame.origin.y = [[UIApplication sharedApplication] delegate].window.frame.size.height;
+    CGRect alertFrame = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame;
+    alertFrame.origin.y = [[UIApplication sharedApplication] delegate].window.frame.size.height;
     
     [UIWindow animateWithDuration:0.3 animations:^{
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = frame;
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = alertFrame;
     }];
 }
 
