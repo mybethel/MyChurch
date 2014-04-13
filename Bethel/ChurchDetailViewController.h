@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "HAPaperCollectionViewController.h"
-#import "QMBParallaxScrollViewController.h"
 #import "ChurchLocation.h"
 #import "HATransitionController.h"
 

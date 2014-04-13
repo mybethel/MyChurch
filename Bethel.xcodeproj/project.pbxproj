@@ -14,15 +14,10 @@
 		860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */; };
 		860F9A6718F23953007AB29C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860F9A6618F23953007AB29C /* CoreText.framework */; };
 		860F9A7518F23CEB007AB29C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860F9A7418F23CEB007AB29C /* QuartzCore.framework */; };
-		860F9A8618F4C447007AB29C /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8518F4C447007AB29C /* MainNavigationController.m */; };
-		860F9A8918F4D762007AB29C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8818F4D762007AB29C /* MainViewController.m */; };
-		860F9A8C18F4D80A007AB29C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8B18F4D80A007AB29C /* MapViewController.m */; };
 		860F9A8F18F4D867007AB29C /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A8E18F4D867007AB29C /* ResultsViewController.m */; };
 		860F9AAC18F4F102007AB29C /* DATBlurSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AA918F4F102007AB29C /* DATBlurSegue.m */; };
 		860F9AAD18F4F102007AB29C /* DATBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AAB18F4F102007AB29C /* DATBlurView.m */; };
 		860F9AB018F4F444007AB29C /* LocationAwareSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */; };
-		860F9AB918F9EFA5007AB29C /* QMBParallaxScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AB618F9EFA5007AB29C /* QMBParallaxScrollViewController.m */; };
-		860F9ABA18F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9AB818F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m */; };
 		863ED8631839A22000AB7A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8621839A22000AB7A6A /* Foundation.framework */; };
 		863ED8651839A22000AB7A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8641839A22000AB7A6A /* CoreGraphics.framework */; };
 		863ED8671839A22000AB7A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863ED8661839A22000AB7A6A /* UIKit.framework */; };
@@ -70,12 +65,6 @@
 		860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchDetailViewController.m; sourceTree = "<group>"; };
 		860F9A6618F23953007AB29C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		860F9A7418F23CEB007AB29C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		860F9A8418F4C447007AB29C /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
-		860F9A8518F4C447007AB29C /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
-		860F9A8718F4D762007AB29C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		860F9A8818F4D762007AB29C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		860F9A8A18F4D80A007AB29C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		860F9A8B18F4D80A007AB29C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		860F9A8D18F4D867007AB29C /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		860F9A8E18F4D867007AB29C /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		860F9AA818F4F102007AB29C /* DATBlurSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATBlurSegue.h; sourceTree = "<group>"; };
@@ -84,10 +73,6 @@
 		860F9AAB18F4F102007AB29C /* DATBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATBlurView.m; sourceTree = "<group>"; };
 		860F9AAE18F4F444007AB29C /* LocationAwareSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAwareSplash.h; sourceTree = "<group>"; };
 		860F9AAF18F4F444007AB29C /* LocationAwareSplash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAwareSplash.m; sourceTree = "<group>"; };
-		860F9AB518F9EFA5007AB29C /* QMBParallaxScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMBParallaxScrollViewController.h; sourceTree = "<group>"; };
-		860F9AB618F9EFA5007AB29C /* QMBParallaxScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMBParallaxScrollViewController.m; sourceTree = "<group>"; };
-		860F9AB718F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QMBParallaxScrollViewController.h"; sourceTree = "<group>"; };
-		860F9AB818F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QMBParallaxScrollViewController.m"; sourceTree = "<group>"; };
 		863ED85F1839A22000AB7A6A /* Bethel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bethel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED8621839A22000AB7A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863ED8641839A22000AB7A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,18 +169,6 @@
 			path = Dependencies/DATBlurSegue;
 			sourceTree = "<group>";
 		};
-		860F9AB418F9EFA5007AB29C /* QMBParallaxScrollViewController */ = {
-			isa = PBXGroup;
-			children = (
-				860F9AB518F9EFA5007AB29C /* QMBParallaxScrollViewController.h */,
-				860F9AB618F9EFA5007AB29C /* QMBParallaxScrollViewController.m */,
-				860F9AB718F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.h */,
-				860F9AB818F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m */,
-			);
-			name = QMBParallaxScrollViewController;
-			path = Libraries/QMBParallaxScrollViewController;
-			sourceTree = SOURCE_ROOT;
-		};
 		863ED8561839A22000AB7A6A = {
 			isa = PBXGroup;
 			children = (
@@ -238,14 +211,8 @@
 				863ED8711839A22000AB7A6A /* AppDelegate.h */,
 				863ED8721839A22000AB7A6A /* AppDelegate.m */,
 				863ED8741839A22000AB7A6A /* Main.storyboard */,
-				860F9A8718F4D762007AB29C /* MainViewController.h */,
-				860F9A8818F4D762007AB29C /* MainViewController.m */,
-				860F9A8A18F4D80A007AB29C /* MapViewController.h */,
-				860F9A8B18F4D80A007AB29C /* MapViewController.m */,
 				860F9A8D18F4D867007AB29C /* ResultsViewController.h */,
 				860F9A8E18F4D867007AB29C /* ResultsViewController.m */,
-				860F9A8418F4C447007AB29C /* MainNavigationController.h */,
-				860F9A8518F4C447007AB29C /* MainNavigationController.m */,
 				860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */,
 				860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */,
 				863ED89C1839A9D900AB7A6A /* ChurchLocation.h */,
@@ -267,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				866E82B318FA020900E5D594 /* HAPaperView */,
-				860F9AB418F9EFA5007AB29C /* QMBParallaxScrollViewController */,
 				860F9A9418F4F0DE007AB29C /* DATBlurSegue */,
 				863ED86A1839A22000AB7A6A /* Bethel-Info.plist */,
 				863ED86B1839A22000AB7A6A /* InfoPlist.strings */,
@@ -450,21 +416,16 @@
 				863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */,
 				866E82CB18FA1C3B00E5D594 /* fmemopen.c in Sources */,
 				860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */,
-				860F9ABA18F9EFA5007AB29C /* UIViewController+QMBParallaxScrollViewController.m in Sources */,
 				866E82C018FA033800E5D594 /* HAPaperCollectionViewController.m in Sources */,
 				860F9AB018F4F444007AB29C /* LocationAwareSplash.m in Sources */,
 				866E82C218FA033800E5D594 /* HATransitionLayout.m in Sources */,
 				866E82BF18FA033800E5D594 /* HACollectionViewSmallLayout.m in Sources */,
-				860F9A8618F4C447007AB29C /* MainNavigationController.m in Sources */,
 				863ED8731839A22000AB7A6A /* AppDelegate.m in Sources */,
 				866E82CD18FA1C3B00E5D594 /* MarkdownTokens.m in Sources */,
 				866E82C118FA033800E5D594 /* HATransitionController.m in Sources */,
-				860F9AB918F9EFA5007AB29C /* QMBParallaxScrollViewController.m in Sources */,
 				866E82CE18FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.m in Sources */,
 				866E82CC18FA1C3B00E5D594 /* MarkdownTokenizer.m in Sources */,
-				860F9A8918F4D762007AB29C /* MainViewController.m in Sources */,
 				860F9AAC18F4F102007AB29C /* DATBlurSegue.m in Sources */,
-				860F9A8C18F4D80A007AB29C /* MapViewController.m in Sources */,
 				860F9AAD18F4F102007AB29C /* DATBlurView.m in Sources */,
 				860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */,
 				866E82BE18FA033800E5D594 /* HACollectionViewLargeLayout.m in Sources */,

@@ -4,26 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
-        <scene sceneID="bep-ml-Dh2">
-            <objects>
-                <viewController storyboardIdentifier="MapView" id="Iex-3T-XQf" customClass="MapViewController" sceneMemberID="viewController">
-                    <mapView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="I5C-Io-xma">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </mapView>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="200"/>
-                    <connections>
-                        <outlet property="mapView" destination="I5C-Io-xma" id="LDs-AS-rUn"/>
-                        <segue destination="HlU-g3-dxg" kind="push" identifier="ChurchDetail" id="6zo-3v-ep8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nPT-ht-HpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-23" y="-442"/>
-        </scene>
         <!--Church Detail View Controller-->
         <scene sceneID="Yfk-Bw-FbD">
             <objects>
@@ -39,7 +19,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CELL_ID" id="TLB-y6-GaM">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -57,7 +37,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lww-Fy-TJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="39"/>
+            <point key="canvasLocation" x="430" y="-145"/>
         </scene>
         <!--Location Aware Splash-->
         <scene sceneID="11R-10-ojC">
@@ -94,7 +74,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlk-dm-v7Y">
                                 <rect key="frame" x="266" y="504" width="54" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="DisclosureClosed.png">
+                                <state key="normal" image="DisclosureClosed">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -125,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ru8-M7-pHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-464" y="533"/>
+            <point key="canvasLocation" x="7" y="524"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="B2a-va-FKc">
@@ -138,7 +118,7 @@
                         <color key="sectionIndexBackgroundColor" white="0.97999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MinistryLocationCell" rowHeight="89" id="lPZ-N2-oqq" customClass="LocationTableCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="89"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lPZ-N2-oqq" id="7q4-gI-wuu">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
@@ -177,6 +157,7 @@
                             <outlet property="delegate" destination="04c-vP-dvV" id="mDc-1i-PoJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="GQe-hd-dm0"/>
                     <connections>
                         <outlet property="view" destination="70t-4V-URK" id="Cls-3q-PKe"/>
                         <segue destination="HlU-g3-dxg" kind="push" identifier="ChurchDetail" id="tz2-91-eBF"/>
@@ -184,32 +165,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwl-Wt-Kqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="533"/>
+            <point key="canvasLocation" x="7" y="-145"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="vzL-fC-WKK">
-            <objects>
-                <viewController id="Qvv-zy-7Uh" customClass="MainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UrC-UD-HPP"/>
-                        <viewControllerLayoutGuide type="bottom" id="HW9-2F-OT8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HpH-Pf-guc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="131-lj-mq8"/>
-                    <size key="freeformSize" width="320" height="568"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Oc-a1-zPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-23" y="-145"/>
-        </scene>
-        <!--Main Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="Qsc-Pb-yBl">
             <objects>
-                <navigationController definesPresentationContext="YES" id="gjw-Uo-6g9" customClass="MainNavigationController" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="gjw-Uo-6g9" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IkX-le-hwu">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -219,8 +180,8 @@
                         <color key="tintColor" red="0.0" green="0.57647061347961426" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
                     </toolbar>
                     <connections>
-                        <segue destination="Qvv-zy-7Uh" kind="relationship" relationship="rootViewController" id="uSL-bl-U17"/>
                         <segue destination="lGy-Gh-wME" kind="custom" identifier="ShowSplash" customClass="DATBlurSegue" id="i2N-ku-1AS"/>
+                        <segue destination="04c-vP-dvV" kind="relationship" relationship="rootViewController" id="CSI-ri-aij"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZP-tO-gBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,7 +190,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DisclosureClosed.png" width="22" height="22"/>
+        <image name="DisclosureClosed" width="22" height="22"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.57647061347961426" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -237,7 +198,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="tz2-91-eBF"/>
-    </inferredMetricsTieBreakers>
 </document>
