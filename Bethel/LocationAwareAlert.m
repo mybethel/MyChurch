@@ -25,7 +25,6 @@
     
     _welcomeTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 290, 0)];
     _welcomeTitleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
-    _welcomeTitleLabel.text = @"Welcome to Bethel";
     _welcomeTitleLabel.textColor = [UIColor whiteColor];
     welcomeTitleView.contentView = _welcomeTitleLabel;
     
@@ -42,12 +41,11 @@
 - (void)showLocationAlert
 {
     _welcomeTitleLabel.text = [NSString stringWithFormat:@"Welcome to %@", [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].title];
+    CGRect alertFrame = self.view.frame;
+    alertFrame.origin.y = self.view.superview.frame.size.height-36;
     
-    CGRect alertFrame = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame;
-    alertFrame.origin.y = [[UIApplication sharedApplication] delegate].window.frame.size.height-36;
-    
-    [UIWindow animateWithDuration:0.3 animations:^{
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = alertFrame;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.view.frame = alertFrame;
     }];
     
     _isLocationAlertVisible = TRUE;
@@ -55,11 +53,11 @@
 
 - (void)hideLocationAlert
 {
-    CGRect alertFrame = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame;
-    alertFrame.origin.y = [[UIApplication sharedApplication] delegate].window.frame.size.height;
+    CGRect alertFrame = self.view.frame;
+    alertFrame.origin.y = self.view.superview.frame.size.height;
     
-    [UIWindow animateWithDuration:0.3 animations:^{
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = alertFrame;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.view.frame = alertFrame;
     }];
     
     _isLocationAlertVisible = FALSE;
@@ -70,21 +68,6 @@
     [self hideLocationAlert];
     
     [[[UIApplication sharedApplication] delegate].window.rootViewController performSegueWithIdentifier:@"ShowSplash" sender:self];
-    //[[[UIApplication sharedApplication] delegate].window.rootViewController presentViewController:_splash animated:YES completion:nil];
-}
-
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
-        return YES;
-    } else {
-        return NO;
-    }
 }
 
 @end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07AC6902F7434D9CB445AD52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9A47A5DDEE4E78A6DB3F71 /* libPods.a */; };
 		8600873C18FAB00100E02CE4 /* LocationAwareAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */; };
+		8600874B18FB328B00E02CE4 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8600874A18FB328B00E02CE4 /* MainNavigationController.m */; };
 		860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5218F07E08007AB29C /* LocationTableCell.m */; };
 		860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */; };
 		860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */; };
@@ -58,6 +59,8 @@
 		26D6E6B4896D4131BCF9CA97 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8600873A18FAB00100E02CE4 /* LocationAwareAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAwareAlert.h; sourceTree = "<group>"; };
 		8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAwareAlert.m; sourceTree = "<group>"; };
+		8600874918FB328B00E02CE4 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		8600874A18FB328B00E02CE4 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		860F9A5118F07E08007AB29C /* LocationTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableCell.h; sourceTree = "<group>"; };
 		860F9A5218F07E08007AB29C /* LocationTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableCell.m; sourceTree = "<group>"; };
 		860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TemporaryImage.jpg; path = Resources/TemporaryImage.jpg; sourceTree = SOURCE_ROOT; };
@@ -211,6 +214,8 @@
 				863ED8711839A22000AB7A6A /* AppDelegate.h */,
 				863ED8721839A22000AB7A6A /* AppDelegate.m */,
 				863ED8741839A22000AB7A6A /* Main.storyboard */,
+				8600874918FB328B00E02CE4 /* MainNavigationController.h */,
+				8600874A18FB328B00E02CE4 /* MainNavigationController.m */,
 				860F9A8D18F4D867007AB29C /* ResultsViewController.h */,
 				860F9A8E18F4D867007AB29C /* ResultsViewController.m */,
 				860F9A5E18F1FCD2007AB29C /* ChurchDetailViewController.h */,
@@ -425,6 +430,7 @@
 				866E82C118FA033800E5D594 /* HATransitionController.m in Sources */,
 				866E82CE18FA1C3B00E5D594 /* NSAttributedStringMarkdownParser.m in Sources */,
 				866E82CC18FA1C3B00E5D594 /* MarkdownTokenizer.m in Sources */,
+				8600874B18FB328B00E02CE4 /* MainNavigationController.m in Sources */,
 				860F9AAC18F4F102007AB29C /* DATBlurSegue.m in Sources */,
 				860F9AAD18F4F102007AB29C /* DATBlurView.m in Sources */,
 				860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */,

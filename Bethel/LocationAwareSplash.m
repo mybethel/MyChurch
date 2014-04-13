@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LocationAwareSplash.h"
 #import "LocationAwareAlert.h"
+#import "MainNavigationController.h"
 
 @implementation LocationAwareSplash
 
@@ -38,21 +39,16 @@
     self.view.backgroundColor = [UIColor clearColor];
 }
 
-- (BOOL)shouldAutorotate
+- (BOOL)prefersStatusBarHidden
 {
-    return NO;
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
+    return YES;
 }
 
 - (IBAction)closeSplash:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:^{
-        UIWindow *locationAlertWindow = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow];
-        [(LocationAwareAlert *)locationAlertWindow.rootViewController showLocationAlert];
+        UIWindow *locationAlertWindow = [(AppDelegate *)[[UIApplication sharedApplication] delegate] window];        
+        [[(MainNavigationController *)locationAlertWindow.rootViewController locationBanner] showLocationAlert];
     }];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainNavigationController.h"
 
 @implementation AppDelegate
 
@@ -25,18 +26,6 @@
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     [_locationManager startUpdatingLocation];
-    
-    _locationAlertWindow = [[UIWindow alloc] initWithFrame:self.window.bounds];
-    _locationAlertWindow.rootViewController = [[LocationAwareAlert alloc] init];
-    _locationAlertWindow.clipsToBounds = YES;
-    _locationAlertWindow.opaque = YES;
-    _locationAlertWindow.windowLevel = UIWindowLevelAlert + 1;
-    _locationAlertWindow.backgroundColor = [UIColor blackColor];
-    
-    [_locationAlertWindow makeKeyAndVisible];
-    _locationAlertWindow.frame = CGRectMake(0, self.window.bounds.size.height, 320, 36);
-    
-    [self.window makeKeyWindow];
     
     // Override point for customization after application launch.
     return YES;
@@ -70,9 +59,9 @@
                 // Populate the ChurchLocation object to use in the splash dialogue.
                 _liveLocation = [[ChurchLocation alloc] initWithLocation:location ministry:ministry coordinate:coordinate];
                 
-                [(LocationAwareAlert *)_locationAlertWindow.rootViewController showLocationAlert];
+                [[(MainNavigationController *)self.window.rootViewController locationBanner] showLocationAlert];
             } else {
-                [(LocationAwareAlert *)_locationAlertWindow.rootViewController hideLocationAlert];
+                [[(MainNavigationController *)self.window.rootViewController locationBanner] hideLocationAlert];
             }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);

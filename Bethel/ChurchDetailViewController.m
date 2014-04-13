@@ -11,6 +11,7 @@
 #import "HACollectionViewSmallLayout.h"
 #import "HACollectionViewLargeLayout.h"
 #import "ChurchDetailViewController.h"
+#import "MainNavigationController.h"
 
 @implementation ChurchDetailViewController
 
@@ -103,11 +104,9 @@
     [super viewDidAppear:animated];
     [self.view bringSubviewToFront:_topView];
     
-    UIWindow *locationAlertWindow = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow];
-    if ([(LocationAwareAlert *)locationAlertWindow.rootViewController isLocationAlertVisible] && [[(AppDelegate *)[[UIApplication sharedApplication] delegate] activeLocation].uuid isEqualToString: [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].uuid]) {
-        [(LocationAwareAlert *)locationAlertWindow.rootViewController hideLocationAlert];
-    } else {
-        [(LocationAwareAlert *)locationAlertWindow.rootViewController showLocationAlert];
+    UIWindow *window = [(AppDelegate *)[[UIApplication sharedApplication] delegate] window];
+    if ([[(AppDelegate *)[[UIApplication sharedApplication] delegate] activeLocation].uuid isEqualToString: [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].uuid]) {
+        [[(MainNavigationController *)window.rootViewController locationBanner] hideLocationAlert];
     }
 }
 

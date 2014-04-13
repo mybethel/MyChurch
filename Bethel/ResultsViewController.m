@@ -11,6 +11,7 @@
 #import "AFHttpRequestOperationManager.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "LocationTableCell.h"
+#import "MainNavigationController.h"
 
 #define kMapOffsetY -200.0
 #define kMapHeight 240.0
@@ -33,6 +34,21 @@
     
     [self setupMapView];
     [self setupBranding];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    UIWindow *window = [(AppDelegate *)[[UIApplication sharedApplication] delegate] window];
+    if ([(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation]) {
+        [[(MainNavigationController *)window.rootViewController locationBanner] showLocationAlert];
+    }
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 #pragma mark Map View
