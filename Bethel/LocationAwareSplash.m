@@ -17,23 +17,23 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
 
-    _welcomeTitleView = [[FBShimmeringView alloc] init];
-    _welcomeTitleView.shimmering = YES;
-    _welcomeTitleView.shimmeringBeginFadeDuration = 0.3;
-    _welcomeTitleView.shimmeringOpacity = 0.6;
-    _welcomeTitleView.shimmeringSpeed = 110;
-    _welcomeTitleView.frame = CGRectMake(0, 15, self.view.frame.size.width, 200);
-    [self.view addSubview:_welcomeTitleView];
+    FBShimmeringView *welcomeTitleView = [[FBShimmeringView alloc] init];
+    welcomeTitleView.shimmering = YES;
+    welcomeTitleView.shimmeringBeginFadeDuration = 0.3;
+    welcomeTitleView.shimmeringOpacity = 0.6;
+    welcomeTitleView.shimmeringSpeed = 110;
+    welcomeTitleView.frame = CGRectMake(0, 15, self.view.frame.size.width, 200);
+    [self.view addSubview:welcomeTitleView];
 
-    _welcomeTitleLabel = [[UILabel alloc] initWithFrame:_welcomeTitleView.bounds];
-    _welcomeTitleLabel.text = [NSString stringWithFormat:@"Welcome to\n%@", [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].title];
-    _welcomeTitleLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:37.0];
-    _welcomeTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    _welcomeTitleLabel.numberOfLines = 4;
-    _welcomeTitleLabel.textColor = [UIColor whiteColor];
-    _welcomeTitleLabel.textAlignment = NSTextAlignmentCenter;
+    UILabel *welcomeTitleLabel = [[UILabel alloc] initWithFrame:welcomeTitleView.bounds];
+    welcomeTitleLabel.text = [NSString stringWithFormat:@"Welcome to\n%@", [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].title];
+    welcomeTitleLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:37.0];
+    welcomeTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    welcomeTitleLabel.numberOfLines = 4;
+    welcomeTitleLabel.textColor = [UIColor whiteColor];
+    welcomeTitleLabel.textAlignment = NSTextAlignmentCenter;
 
-    _welcomeTitleView.contentView = _welcomeTitleLabel;
+    welcomeTitleView.contentView = welcomeTitleLabel;
     
     self.view.backgroundColor = [UIColor clearColor];
 }

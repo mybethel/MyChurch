@@ -11,7 +11,4 @@
 
 @interface LocationAwareSplash : UIViewController
 
-@property (nonatomic, retain) FBShimmeringView *welcomeTitleView;
-@property (nonatomic, retain) UILabel *welcomeTitleLabel;
-
 @end

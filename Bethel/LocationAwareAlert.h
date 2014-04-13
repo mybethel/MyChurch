@@ -11,9 +11,7 @@
 
 @interface LocationAwareAlert : UIViewController <UIViewControllerTransitioningDelegate>
 
-@property (nonatomic, retain) FBShimmeringView *welcomeTitleView;
 @property (nonatomic, retain) UILabel *welcomeTitleLabel;
-@property (nonatomic, retain) NSString *welcomeTitle;
 
 - (void)showLocationAlert;
 - (void)hideLocationAlert;

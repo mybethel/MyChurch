@@ -15,19 +15,19 @@
 {
     [super viewWillAppear:animated];
     
-    _welcomeTitleView = [[FBShimmeringView alloc] init];
-    _welcomeTitleView.shimmering = YES;
-    _welcomeTitleView.shimmeringBeginFadeDuration = 0.3;
-    _welcomeTitleView.shimmeringOpacity = 0.6;
-    _welcomeTitleView.shimmeringSpeed = 110;
-    _welcomeTitleView.frame = CGRectMake(12, 8, 290, 20);
-    [self.view addSubview:_welcomeTitleView];
+    FBShimmeringView *welcomeTitleView = [[FBShimmeringView alloc] init];
+    welcomeTitleView.shimmering = YES;
+    welcomeTitleView.shimmeringBeginFadeDuration = 0.3;
+    welcomeTitleView.shimmeringOpacity = 0.6;
+    welcomeTitleView.shimmeringSpeed = 110;
+    welcomeTitleView.frame = CGRectMake(12, 8, 290, 20);
+    [self.view addSubview:welcomeTitleView];
     
     _welcomeTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 290, 0)];
     _welcomeTitleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
     _welcomeTitleLabel.text = @"Welcome to Bethel";
     _welcomeTitleLabel.textColor = [UIColor whiteColor];
-    _welcomeTitleView.contentView = _welcomeTitleLabel;
+    welcomeTitleView.contentView = _welcomeTitleLabel;
     
     CALayer *disclosure = [CALayer layer];
     disclosure.frame = CGRectMake(self.view.bounds.size.width-30, 7, 23, 23);
