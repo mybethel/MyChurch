@@ -14,13 +14,25 @@
 {
     [super awakeFromNib];
     
-    UIView *frame = [[UIView alloc] initWithFrame:CGRectMake(10, 14, CGRectGetWidth(self.bounds)-20, CGRectGetHeight(self.bounds)-14)];
+    UIView *frame = [[UIView alloc] initWithFrame:CGRectMake(10, 14, CGRectGetWidth(self.contentView.bounds)-20, CGRectGetHeight(self.contentView.bounds)-14)];
     frame.backgroundColor = [UIColor whiteColor];
-    [self insertSubview:frame atIndex:0];
-    [frame.layer setShadowOffset:CGSizeMake(0, 0)];
-    [frame.layer setShadowColor:[[UIColor blackColor] CGColor]];
-    [frame.layer setShadowRadius:3.0];
-    [frame.layer setShadowOpacity:0.2];
+    frame.tag = 99;
+    [self.contentView insertSubview:frame atIndex:0];
+    frame.layer.shadowOffset = CGSizeMake(0, 0);
+    frame.layer.shadowColor = [[UIColor blackColor] CGColor];
+    frame.layer.shadowRadius = 3.0;
+    frame.layer.shadowOpacity = 0.2;
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    if (highlighted) {
+        [self viewWithTag:99].layer.shadowOpacity = 0.5;
+        [self viewWithTag:99].backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    } else {
+        [self viewWithTag:99].layer.shadowOpacity = 0.2;
+        [self viewWithTag:99].backgroundColor = [UIColor whiteColor];
+    }
 }
 
 @end
