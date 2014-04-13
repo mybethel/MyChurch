@@ -62,7 +62,7 @@
         <!--Location Aware Splash-->
         <scene sceneID="11R-10-ojC">
             <objects>
-                <viewController id="lGy-Gh-wME" customClass="LocationAwareSplash" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationSplash" id="lGy-Gh-wME" customClass="LocationAwareSplash" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xhL-mF-6sB"/>
                         <viewControllerLayoutGuide type="bottom" id="OJ7-zO-OAu"/>
@@ -220,6 +220,7 @@
                     </toolbar>
                     <connections>
                         <segue destination="Qvv-zy-7Uh" kind="relationship" relationship="rootViewController" id="uSL-bl-U17"/>
+                        <segue destination="lGy-Gh-wME" kind="custom" identifier="ShowSplash" customClass="DATBlurSegue" id="i2N-ku-1AS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZP-tO-gBS" userLabel="First Responder" sceneMemberID="firstResponder"/>

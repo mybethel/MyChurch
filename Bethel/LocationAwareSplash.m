@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Albert Martin. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "LocationAwareSplash.h"
+#import "LocationAwareAlert.h"
 
 @implementation LocationAwareSplash
 
@@ -32,6 +34,8 @@
     _welcomeTitleLabel.textAlignment = NSTextAlignmentCenter;
 
     _welcomeTitleView.contentView = _welcomeTitleLabel;
+    
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (BOOL)shouldAutorotate
@@ -46,7 +50,10 @@
 
 - (IBAction)closeSplash:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        UIWindow *locationAlertWindow = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow];
+        [(LocationAwareAlert *)locationAlertWindow.rootViewController showLocationAlert];
+    }];
 }
 
 @end

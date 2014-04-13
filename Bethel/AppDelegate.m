@@ -29,11 +29,14 @@
     _locationAlertWindow = [[UIWindow alloc] initWithFrame:self.window.bounds];
     _locationAlertWindow.rootViewController = [[LocationAwareAlert alloc] init];
     _locationAlertWindow.clipsToBounds = YES;
+    _locationAlertWindow.opaque = YES;
     _locationAlertWindow.windowLevel = UIWindowLevelAlert + 1;
-    _locationAlertWindow.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.9];
+    _locationAlertWindow.backgroundColor = [UIColor blackColor];
     
     [_locationAlertWindow makeKeyAndVisible];
     _locationAlertWindow.frame = CGRectMake(0, self.window.bounds.size.height, 320, 36);
+    
+    [self.window makeKeyWindow];
     
     // Override point for customization after application launch.
     return YES;
@@ -67,21 +70,9 @@
                 // Populate the ChurchLocation object to use in the splash dialogue.
                 _liveLocation = [[ChurchLocation alloc] initWithLocation:location ministry:ministry coordinate:coordinate];
                 
-                [(LocationAwareAlert *)_locationAlertWindow.rootViewController setupLocationAlert];
-                
-                CGRect frame = _locationAlertWindow.frame;
-                frame.origin.y = self.window.frame.size.height-36;
-                
-                [UIWindow animateWithDuration:0.3 animations:^{
-                    _locationAlertWindow.frame = frame;
-                }];
+                [(LocationAwareAlert *)_locationAlertWindow.rootViewController showLocationAlert];
             } else {
-                CGRect frame = _locationAlertWindow.frame;
-                frame.origin.y = self.window.frame.size.height;
-                
-                [UIWindow animateWithDuration:0.3 animations:^{
-                    _locationAlertWindow.frame = frame;
-                }];
+                [(LocationAwareAlert *)_locationAlertWindow.rootViewController hideLocationAlert];
             }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);

@@ -20,7 +20,7 @@
     _welcomeTitleView.shimmeringBeginFadeDuration = 0.3;
     _welcomeTitleView.shimmeringOpacity = 0.6;
     _welcomeTitleView.shimmeringSpeed = 110;
-    _welcomeTitleView.frame = CGRectMake(15, 8, 290, 20);
+    _welcomeTitleView.frame = CGRectMake(12, 8, 290, 20);
     [self.view addSubview:_welcomeTitleView];
     
     _welcomeTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 290, 0)];
@@ -35,11 +35,39 @@
     [_welcomeTitleLabel.layer setShadowRadius:1.0];
     [_welcomeTitleLabel.layer setShadowOpacity:0.6];
     _welcomeTitleView.contentView = _welcomeTitleLabel;
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 
-- (void)setupLocationAlert
+- (void)showLocationAlert
 {
     _welcomeTitleLabel.text = [NSString stringWithFormat:@"Welcome to %@", [(AppDelegate *)[[UIApplication sharedApplication] delegate] liveLocation].title];
+    
+    CGRect frame = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame;
+    frame.origin.y = [[UIApplication sharedApplication] delegate].window.frame.size.height-36;
+    
+    [UIWindow animateWithDuration:0.3 animations:^{
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = frame;
+    }];
+}
+
+- (void)hideLocationAlert
+{
+    CGRect frame = [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame;
+    frame.origin.y = [[UIApplication sharedApplication] delegate].window.frame.size.height;
+    
+    [UIWindow animateWithDuration:0.3 animations:^{
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] locationAlertWindow].frame = frame;
+    }];
+}
+
+- (void)handleTapGesture:(id)sender
+{
+    [self hideLocationAlert];
+    
+    [[[UIApplication sharedApplication] delegate].window.rootViewController performSegueWithIdentifier:@"ShowSplash" sender:self];
+    //[[[UIApplication sharedApplication] delegate].window.rootViewController presentViewController:_splash animated:YES completion:nil];
 }
 
 - (BOOL)prefersStatusBarHidden
