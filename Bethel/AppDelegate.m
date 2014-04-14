@@ -50,7 +50,7 @@
                 coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
                 coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
                 
-                _liveLocation = [[ChurchLocation alloc] initWithLocation:location ministry:ministries[location[@"obj"][@"ministry"]] coordinate:coordinate];
+                _liveLocation = [[ChurchLocation alloc] initWithLocation:location[@"obj"] ministry:ministries[location[@"obj"][@"ministry"]] coordinate:coordinate];
                 
                 [[(MainNavigationController *)self.window.rootViewController locationBanner] showLocationAlert];
                 
