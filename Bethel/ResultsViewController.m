@@ -124,11 +124,7 @@
             }
         }
         if (!skipLocationAdd) {
-            CLLocationCoordinate2D coordinate;
-            coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
-            coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
-            
-            locationResult = [[ChurchLocation alloc] initWithLocation:location[@"obj"] ministry:ministries[location[@"obj"][@"ministry"]] coordinate:coordinate];
+            locationResult = [[ChurchLocation alloc] initWithLocation:location[@"obj"] ministry:ministries[location[@"obj"][@"ministry"]]];
             [keepLocations addObject:location[@"obj"][@"_id"]];
             
             [_mapView addAnnotation:locationResult];

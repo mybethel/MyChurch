@@ -19,7 +19,7 @@
 @property (nonatomic, copy) NSDictionary *location;
 @property (nonatomic, copy) NSDictionary *ministry;
 
-- (id)initWithLocation:(NSDictionary *)location ministry:(NSDictionary *)ministry coordinate:(CLLocationCoordinate2D)coordinate;
+- (id)initWithLocation:(NSDictionary *)location ministry:(NSDictionary *)ministry;
 - (MKMapItem*)mapItem;
 
 @end

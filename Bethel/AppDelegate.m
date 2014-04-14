@@ -46,11 +46,7 @@
             for (id location in locations) {
                 if (!location || !ministries[location[@"obj"][@"ministry"]]) continue;
                 
-                CLLocationCoordinate2D coordinate;
-                coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
-                coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
-                
-                _liveLocation = [[ChurchLocation alloc] initWithLocation:location[@"obj"] ministry:ministries[location[@"obj"][@"ministry"]] coordinate:coordinate];
+                _liveLocation = [[ChurchLocation alloc] initWithLocation:location[@"obj"] ministry:ministries[location[@"obj"][@"ministry"]]];
                 
                 [[(MainNavigationController *)self.window.rootViewController locationBanner] showLocationAlert];
                 
