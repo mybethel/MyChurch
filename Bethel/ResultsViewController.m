@@ -12,6 +12,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "LocationTableCell.h"
 #import "MainNavigationController.h"
+#import "BethelAPI.h"
 
 #define kMapOffsetY -200.0
 #define kMapHeight 240.0
@@ -102,57 +103,47 @@
     MKMapRect mRect = self.mapView.visibleMapRect;
     MKMapPoint eastMapPoint = MKMapPointMake(MKMapRectGetMinX(mRect), MKMapRectGetMidY(mRect));
     MKMapPoint westMapPoint = MKMapPointMake(MKMapRectGetMaxX(mRect), MKMapRectGetMidY(mRect));
+    double currentDist = MKMetersBetweenMapPoints(eastMapPoint, westMapPoint);
     
-    currentDist = MKMetersBetweenMapPoints(eastMapPoint, westMapPoint);
-    currentCenter = self.mapView.centerCoordinate;
+    [[BethelAPI new] getAllLocationsNear:self.mapView.centerCoordinate withRadius:currentDist/1000 completion:^(NSDictionary *locations, NSDictionary *ministries) { [self processLocations:locations ministries:ministries]; }];
+}
+
+- (void)processLocations:(NSDictionary *)locations ministries:(NSDictionary *)ministries
+{
+    ChurchLocation *locationResult;
+    NSMutableArray *keepLocations = [[NSMutableArray alloc] init];
+    BOOL skipLocationAdd;
     
-    NSString *locationQuery = [NSString stringWithFormat:@"http://my.bethel.io/location/map/%f/%f/%d", currentCenter.latitude, currentCenter.longitude, currentDist/1000];
-    
-    // todo: Pin clustering if we're all the way zoomed out!
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:locationQuery parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
-        
-        _locationResults = [locations objectForKey: @"locations"];
-        _ministryResults = [locations objectForKey: @"ministries"];
-        
-        ChurchLocation *locationResult;
-        NSMutableArray *keepLocations = [[NSMutableArray alloc] init];
-        BOOL skipLocationAdd;
-        
-        for (id location in _locationResults) {
-            skipLocationAdd = FALSE;
-            for (ChurchLocation *oldLocation in _locations) {
-                NSString *locationId = oldLocation.uuid;
-                if ([locationId isEqualToString: location[@"obj"][@"_id"]]) {
-                    skipLocationAdd = TRUE;
-                    [keepLocations addObject:locationId];
-                }
-            }
-            if (!skipLocationAdd) {
-                CLLocationCoordinate2D coordinate;
-                coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
-                coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
-                
-                locationResult = [[ChurchLocation alloc] initWithLocation:location[@"obj"] ministry:_ministryResults[location[@"obj"][@"ministry"]] coordinate:coordinate];
-                [keepLocations addObject:location[@"obj"][@"_id"]];
-                
-                [_mapView addAnnotation:locationResult];
-                [_locations addObject:locationResult];
+    for (id location in locations) {
+        skipLocationAdd = FALSE;
+        for (ChurchLocation *oldLocation in _locations) {
+            NSString *locationId = oldLocation.uuid;
+            if ([locationId isEqualToString: location[@"obj"][@"_id"]]) {
+                skipLocationAdd = TRUE;
+                [keepLocations addObject:locationId];
             }
         }
-        for (id<MKAnnotation> annotation in _mapView.annotations) {
-            if ([annotation isKindOfClass:[ChurchLocation class]] && ![keepLocations containsObject: [(ChurchLocation *)annotation uuid]]) {
-                [_mapView removeAnnotation:annotation];
-                [_locations removeObjectIdenticalTo:annotation];
-            }
+        if (!skipLocationAdd) {
+            CLLocationCoordinate2D coordinate;
+            coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
+            coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
+            
+            locationResult = [[ChurchLocation alloc] initWithLocation:location[@"obj"] ministry:ministries[location[@"obj"][@"ministry"]] coordinate:coordinate];
+            [keepLocations addObject:location[@"obj"][@"_id"]];
+            
+            [_mapView addAnnotation:locationResult];
+            [_locations addObject:locationResult];
         }
-        
-        [keepLocations removeAllObjects];
-        [self.tableView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
+    }
+    for (id<MKAnnotation> annotation in _mapView.annotations) {
+        if ([annotation isKindOfClass:[ChurchLocation class]] && ![keepLocations containsObject: [(ChurchLocation *)annotation uuid]]) {
+            [_mapView removeAnnotation:annotation];
+            [_locations removeObjectIdenticalTo:annotation];
+        }
+    }
+    
+    [keepLocations removeAllObjects];
+    [self.tableView reloadData];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {

@@ -10,6 +10,7 @@
 		07AC6902F7434D9CB445AD52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9A47A5DDEE4E78A6DB3F71 /* libPods.a */; };
 		8600873C18FAB00100E02CE4 /* LocationAwareAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */; };
 		8600874B18FB328B00E02CE4 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8600874A18FB328B00E02CE4 /* MainNavigationController.m */; };
+		8600874E18FB6B8700E02CE4 /* BethelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8600874D18FB6B8700E02CE4 /* BethelAPI.m */; };
 		860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5218F07E08007AB29C /* LocationTableCell.m */; };
 		860F9A5D18F1F7D8007AB29C /* TemporaryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */; };
 		860F9A6018F1FCD2007AB29C /* ChurchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860F9A5F18F1FCD2007AB29C /* ChurchDetailViewController.m */; };
@@ -61,6 +62,8 @@
 		8600873B18FAB00100E02CE4 /* LocationAwareAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAwareAlert.m; sourceTree = "<group>"; };
 		8600874918FB328B00E02CE4 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		8600874A18FB328B00E02CE4 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		8600874C18FB6B8700E02CE4 /* BethelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BethelAPI.h; path = Bethel/BethelAPI.h; sourceTree = "<group>"; };
+		8600874D18FB6B8700E02CE4 /* BethelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BethelAPI.m; path = Bethel/BethelAPI.m; sourceTree = "<group>"; };
 		860F9A5118F07E08007AB29C /* LocationTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableCell.h; sourceTree = "<group>"; };
 		860F9A5218F07E08007AB29C /* LocationTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableCell.m; sourceTree = "<group>"; };
 		860F9A5C18F1F7D8007AB29C /* TemporaryImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TemporaryImage.jpg; path = Resources/TemporaryImage.jpg; sourceTree = SOURCE_ROOT; };
@@ -175,6 +178,8 @@
 		863ED8561839A22000AB7A6A = {
 			isa = PBXGroup;
 			children = (
+				8600874C18FB6B8700E02CE4 /* BethelAPI.h */,
+				8600874D18FB6B8700E02CE4 /* BethelAPI.m */,
 				863ED8681839A22000AB7A6A /* Bethel */,
 				863ED88A1839A22000AB7A6A /* BethelTests */,
 				860F9A7718F24023007AB29C /* Markdown */,
@@ -420,6 +425,7 @@
 				860F9A8F18F4D867007AB29C /* ResultsViewController.m in Sources */,
 				863ED89E1839A9D900AB7A6A /* ChurchLocation.m in Sources */,
 				866E82CB18FA1C3B00E5D594 /* fmemopen.c in Sources */,
+				8600874E18FB6B8700E02CE4 /* BethelAPI.m in Sources */,
 				860F9A5318F07E08007AB29C /* LocationTableCell.m in Sources */,
 				866E82C018FA033800E5D594 /* HAPaperCollectionViewController.m in Sources */,
 				860F9AB018F4F444007AB29C /* LocationAwareSplash.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BethelAPI.h"
 #import "MainNavigationController.h"
 
 @implementation AppDelegate
@@ -40,35 +41,25 @@
     if (distance > 10) {
         _currentLocation = newLocation;
         
-        // Query the API with a radius limit of 100 meters.
-        NSString *locationQuery = [NSString stringWithFormat:@"http://my.bethel.io/location/map/%f/%f/%f", _currentLocation.coordinate.latitude, _currentLocation.coordinate.longitude, 0.1];
-        
-        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        [manager GET:locationQuery parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSDictionary *locations = [NSJSONSerialization JSONObjectWithData:[[operation responseString] dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
-            
-            // The API has returned a location within 100 meters, the user is here!
-            if ([[locations objectForKey:@"locations"] count] > 0 && [locations objectForKey:@"locations"][0]) {
-                NSDictionary *location = [locations objectForKey:@"locations"][0][@"obj"];
-                NSDictionary *ministry = [locations objectForKey:@"ministries"][location[@"ministry"]];
+        // The API has returned a location within 100 meters, the user is here!
+        [[BethelAPI new] getAllLocationsNear:_currentLocation.coordinate withRadius:0.1 completion:^(NSDictionary *locations, NSDictionary *ministries) {
+            for (id location in locations) {
+                if (!location || !ministries[location[@"obj"][@"ministry"]]) continue;
                 
                 CLLocationCoordinate2D coordinate;
-                coordinate.latitude = [location[@"loc"][1] doubleValue];
-                coordinate.longitude = [location[@"loc"][0] doubleValue];
+                coordinate.latitude = [location[@"obj"][@"loc"][1] doubleValue];
+                coordinate.longitude = [location[@"obj"][@"loc"][0] doubleValue];
                 
-                // Populate the ChurchLocation object to use in the splash dialogue.
-                _liveLocation = [[ChurchLocation alloc] initWithLocation:location ministry:ministry coordinate:coordinate];
+                _liveLocation = [[ChurchLocation alloc] initWithLocation:location ministry:ministries[location[@"obj"][@"ministry"]] coordinate:coordinate];
                 
                 [[(MainNavigationController *)self.window.rootViewController locationBanner] showLocationAlert];
-            } else {
-                [[(MainNavigationController *)self.window.rootViewController locationBanner] hideLocationAlert];
+                
+                return;
             }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
         }];
     }
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

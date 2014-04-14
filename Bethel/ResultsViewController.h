@@ -13,19 +13,14 @@
 @interface ResultsViewController : UITableViewController <MKMapViewDelegate, UIGestureRecognizerDelegate>
 {
     CLLocationManager *locationManager;
-    CLLocationCoordinate2D currentCenter;
-    int currentDist;
     double deltaLatFor1px;
     BOOL firstLaunch;
     BOOL isScrolling;
 }
 
-@property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) UIView *branding;
+@property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic) CLLocationCoordinate2D mapCenter;
-
 @property (nonatomic, retain) NSMutableArray *locations;
-@property (nonatomic, retain) NSArray *locationResults;
-@property (nonatomic, retain) NSDictionary *ministryResults;
 
 @end
