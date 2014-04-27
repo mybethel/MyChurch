@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "863ED85E1839A22000AB7A6A"
-               BuildableName = "Bethel.app"
+               BuildableName = "MyChurch.app"
                BlueprintName = "MyChurch"
                ReferencedContainer = "container:MyChurch.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "863ED8821839A22000AB7A6A"
-               BuildableName = "BethelTests.xctest"
+               BuildableName = "MyChurchTests.xctest"
                BlueprintName = "MyChurchTests"
                ReferencedContainer = "container:MyChurch.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "863ED85E1839A22000AB7A6A"
-            BuildableName = "Bethel.app"
+            BuildableName = "MyChurch.app"
             BlueprintName = "MyChurch"
             ReferencedContainer = "container:MyChurch.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "863ED85E1839A22000AB7A6A"
-            BuildableName = "Bethel.app"
+            BuildableName = "MyChurch.app"
             BlueprintName = "MyChurch"
             ReferencedContainer = "container:MyChurch.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "863ED85E1839A22000AB7A6A"
-            BuildableName = "Bethel.app"
+            BuildableName = "MyChurch.app"
             BlueprintName = "MyChurch"
             ReferencedContainer = "container:MyChurch.xcodeproj">
          </BuildableReference>

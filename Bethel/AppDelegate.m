@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Albert Martin. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "BethelAPI.h"
 #import "MainNavigationController.h"
@@ -14,6 +15,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSDictionary *credentials = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Credentials" ofType:@"plist"]];
+    
+    [Parse setApplicationId:[credentials objectForKey:@"ParseAppId"]
+                  clientKey:[credentials objectForKey:@"ParseKey"]];
+    
     UIColor* navBarColor = [UIColor colorWithRed:0.047 green:0.568 blue:0.709 alpha:1.0];
 
     [[UINavigationBar appearance] setTintColor:navBarColor];
@@ -29,7 +35,7 @@
     [_locationManager startUpdatingLocation];
     
     // Register for Push Notifications
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeAlert];
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
 
     // Override point for customization after application launch.
     return YES;
@@ -37,14 +43,17 @@
 
 #pragma mark Push Notifications
 
-- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-	NSLog(@"My token is: %@", deviceToken);
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
 }
 
-- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-	NSLog(@"Failed to get token, error: %@", error);
+    [PFPush handlePush:userInfo];
 }
 
 #pragma mark Location Services
