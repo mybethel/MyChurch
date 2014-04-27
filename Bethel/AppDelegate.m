@@ -28,9 +28,26 @@
     _locationManager.delegate = self;
     [_locationManager startUpdatingLocation];
     
+    // Register for Push Notifications
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeAlert];
+
     // Override point for customization after application launch.
     return YES;
 }
+
+#pragma mark Push Notifications
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+	NSLog(@"My token is: %@", deviceToken);
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	NSLog(@"Failed to get token, error: %@", error);
+}
+
+#pragma mark Location Services
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
