@@ -16,8 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     var window: UIWindow?
     var appController: TVApplicationController?
     
+    #if arch(i386) || arch(x86_64)
     static let APIURL = "http://localhost:1337/"
-    static let TVBootURL = "\(AppDelegate.APIURL)tvos/app.js"
+    #else
+    static let APIURL = "http://my.bethel.io/"
+    #endif
+
+    static let TVBootURL = "\(AppDelegate.APIURL)tvOS.js"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
